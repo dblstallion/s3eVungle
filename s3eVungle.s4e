@@ -1,0 +1,83 @@
+include:
+#include "s3eTypes.h"
+
+typedef double s3eVungleTimeInterval;
+
+typedef enum s3eVungleAdOrientation
+{
+    s3eVungleAdOrientationUnknown,
+    s3eVungleAdOrientationPortrait,
+    s3eVungleAdOrientationLandscape,
+    
+    s3eVungleAdOrientationFirst   = s3eVungleAdOrientationPortrait,
+    s3eVungleAdOrientationLast    = s3eVungleAdOrientationLandscape,
+    s3eVungleAdOrientationDefault = s3eVungleAdOrientationPortrait
+} s3eVungleAdOrientation;
+
+typedef enum s3eVungleBaseUrl
+{
+    s3eVungleBaseUrlProd,
+    s3eVungleBaseUrlTest,
+    s3eVungleBaseUrlLocalhost,
+    
+    s3eVungleBaseUrlFirst   = s3eVungleBaseUrlProd,
+    s3eVungleBaseUrlLast    = s3eVungleBaseUrlLocalhost,
+    s3eVungleBaseUrlDefault = s3eVungleBaseUrlProd
+} s3eVungleBaseUrl;
+
+typedef enum s3eVungleGender
+{
+    s3eVungleGenderUnknown,
+    s3eVungleGenderMale,
+    s3eVungleGenderFemale
+} s3eVungleGender;
+
+typedef enum s3eVungleAdType
+{
+    s3eVungleAdTypeUnknown,
+    
+    s3eVungleAdTypeReal,
+    
+    s3eVungleAdTypeFakePreBundleHTML,
+    s3eVungleAdTypeFakePreBundleZip,
+    s3eVungleAdTypeFakePostBundleHTML,
+    s3eVungleAdTypeFakePostBundleZip,
+    s3eVungleAdTypeFakeMovie,
+    
+    s3eVungleAdTypeFakeFirst = s3eVungleAdTypeFakePreBundleHTML,
+    s3eVungleAdTypeFakeLast  = s3eVungleAdTypeFakeMovie
+} s3eVungleAdType;
+
+typedef enum s3eVungleStatus
+{
+    s3eVungleStatusOkay,
+    s3eVungleStatusNetworkError,
+    s3eVungleStatusDiskError
+} s3eVungleStatus;
+
+typedef struct s3eVungleUserData
+{
+	int32 age;
+    s3eVungleGender gender;
+    s3eVungleAdOrientation adOrientation;
+    s3eBool locationEnabled;   // allow vungle to get user location
+} s3eVungleUserData;
+
+typedef struct s3eVunglePlayData
+{
+    s3eVungleTimeInterval start;        // time when we started playing
+    s3eVungleTimeInterval movieTotal;   // total length of the movie
+    s3eVungleTimeInterval movieViewed;  // total length viewed by the user
+	s3eBool playedFull;
+} s3eVunglePlayData;
+
+typedef struct s3eVungleStatusData
+{
+    int32 videoAdsCached;
+    int32 videoAdsUnviewed;
+    s3eVungleStatus status;
+} s3eVungleStatusData;
+
+functions:
+
+void s3eVungleDefaultUserData(s3eVungleUserData* out_userData)
