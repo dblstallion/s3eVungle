@@ -3,6 +3,44 @@ include:
 
 typedef double s3eVungleTimeInterval;
 
+typedef enum s3eVungleCallback
+{
+	/**
+	 * Called when a video ad has finished playing
+	 * May be called more than once per ad if the user decides to re-watch the video
+	 * systemData will be a pointer to an s3eVunglePlayData instance
+	 */
+	s3eVungleCallback_MoviePlayed,
+	/**
+	 * Called when the Vungle status is changed
+	 * systemData will be a pointer to an s3eVungleStatusData instance
+	 */
+	s3eVungleCallback_StatusUpdate,
+	/**
+	 * Called when the Vungle UIViewController is hidden
+	 * systemData will be NULL
+	 */
+	s3eVungleCallback_ViewDidDisappear,
+	/**
+	 * Called when the Vungle UIViewController will be shown
+	 * systemData will be NULL
+	 */
+	s3eVungleCallback_ViewWillAppear,
+	/**
+	 * Called when the Vungle AppStoreViewDidDisappear delegate is called
+	 * systemData will be NULL
+	 */
+	s3eVungleCallback_AppStoreViewDidDisappear,
+	/**
+	 * Called when the Vungle API wants to log some test
+	 * systemData will be a const char* containing the logging text
+	 */
+	s3eVungleCallback_Logging,
+	
+	// Marker for the last callback
+	s3eVungleCallback_MAX
+} s3eVungleCallback;
+
 typedef enum s3eVungleAdOrientation
 {
     s3eVungleAdOrientationUnknown,
@@ -13,17 +51,6 @@ typedef enum s3eVungleAdOrientation
     s3eVungleAdOrientationLast    = s3eVungleAdOrientationLandscape,
     s3eVungleAdOrientationDefault = s3eVungleAdOrientationPortrait
 } s3eVungleAdOrientation;
-
-typedef enum s3eVungleBaseUrl
-{
-    s3eVungleBaseUrlProd,
-    s3eVungleBaseUrlTest,
-    s3eVungleBaseUrlLocalhost,
-    
-    s3eVungleBaseUrlFirst   = s3eVungleBaseUrlProd,
-    s3eVungleBaseUrlLast    = s3eVungleBaseUrlLocalhost,
-    s3eVungleBaseUrlDefault = s3eVungleBaseUrlProd
-} s3eVungleBaseUrl;
 
 typedef enum s3eVungleGender
 {
@@ -81,3 +108,39 @@ typedef struct s3eVungleStatusData
 functions:
 
 void s3eVungleDefaultUserData(s3eVungleUserData* out_userData)
+
+// Callback functions
+s3eResult s3eVungleRegister(s3eVungleCallback callbackID, s3eCallback callbackFn, void* userData) S3E_RESULT_ERROR
+s3eResult s3eVungleUnRegister(s3eVungleCallback callbackID, s3eCallback callbackFn) S3E_RESULT_ERROR
+
+// Start functions
+// Note: Stop is automatically called
+void s3eVungleStart(const char* pubAppID)
+void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* userData)
+
+// General utility functions
+s3eResult s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData) S3E_RESULT_ERROR
+s3eBool s3eVungleIsRunning() S3E_FALSE
+void s3eVunglePrintCacheFiles()
+void s3eVunglePrintDeviceSettings()
+const char* s3eVungleGetVersionString() NULL
+
+// Ad display functions
+s3eBool s3eVungleIsAdAvailable() S3E_FALSE
+void s3eVunglePlayModalAd(s3eBool animate, s3eBool showClose)
+void s3eVunglePlayIncentivizedAd(s3eBool animate, s3eBool showClose, const char* userTag)
+
+// Cache size configuration functions
+int32 s3eVungleGetCacheSize() 0
+void s3eVungleSetCacheSize(int32 megabytes)
+
+// Logging functions
+void s3eVungleSetLogToStdout(s3eBool state)
+
+// Ad settings
+void s3eVungleSetSoundEnabled(s3eBool enabled)
+void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state)
+void s3eVungleSetCustomCountDownText(const char* text)
+void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle)
+
+void s3eVungleSetAllowAutoRotate(s3eBool allow)
