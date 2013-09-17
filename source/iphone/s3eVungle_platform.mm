@@ -8,15 +8,17 @@
  */
 #include "s3eVungle_internal.h"
 
+#import <UIKit/UIKit.h>
+#import "vunglepub.h"
+
 s3eResult s3eVungleInit_platform()
 {
-    // Add any platform-specific initialisation code here
     return S3E_RESULT_SUCCESS;
 }
 
 void s3eVungleTerminate_platform()
 {
-    // Add any platform-specific termination code here
+    [VGVunglePub stop];
 }
 
 void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)
@@ -35,6 +37,7 @@ s3eResult s3eVungleUnRegister_platform(s3eVungleCallback callbackID, s3eCallback
 
 void s3eVungleStart_platform(const char* pubAppID)
 {
+	[VGVunglePub startWithPubAppID:[NSString stringWithUTF8String:pubAppID]];
 }
 
 void s3eVungleStartWithUserData_platform(const char* pubAppID, const s3eVungleUserData* userData)
@@ -48,25 +51,27 @@ s3eResult s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData* out_status
 
 s3eBool s3eVungleIsRunning_platform()
 {
-    return S3E_FALSE;
+    return [VGVunglePub running];
 }
 
 void s3eVunglePrintCacheFiles_platform()
 {
+	[VGVunglePub showCacheFiles];
 }
 
 void s3eVunglePrintDeviceSettings_platform()
 {
+	[VGVunglePub showDeviceSettings];
 }
 
 const char* s3eVungleGetVersionString_platform()
 {
-    return NULL;
+    return [[VGVunglePub versionString] UTF8String];
 }
 
 s3eBool s3eVungleIsAdAvailable_platform()
 {
-    return S3E_FALSE;
+    return [VGVunglePub adIsAvailable];
 }
 
 void s3eVunglePlayModalAd_platform(s3eBool animate, s3eBool showClose)
