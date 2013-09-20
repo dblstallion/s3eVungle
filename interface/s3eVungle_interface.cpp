@@ -18,7 +18,7 @@ typedef  s3eResult(*s3eVungleRegister_t)(s3eVungleCallback callbackID, s3eCallba
 typedef  s3eResult(*s3eVungleUnRegister_t)(s3eVungleCallback callbackID, s3eCallback callbackFn);
 typedef       void(*s3eVungleStart_t)(const char* pubAppID);
 typedef       void(*s3eVungleStartWithUserData_t)(const char* pubAppID, const s3eVungleUserData* userData);
-typedef  s3eResult(*s3eVungleGetCurrentStatusData_t)(s3eVungleStatusData* out_statusData);
+typedef       void(*s3eVungleGetCurrentStatusData_t)(s3eVungleStatusData* out_statusData);
 typedef    s3eBool(*s3eVungleIsRunning_t)();
 typedef       void(*s3eVunglePrintCacheFiles_t)();
 typedef       void(*s3eVunglePrintDeviceSettings_t)();
@@ -31,7 +31,7 @@ typedef       void(*s3eVungleSetCacheSize_t)(int32 megabytes);
 typedef       void(*s3eVungleSetLogToStdout_t)(s3eBool state);
 typedef       void(*s3eVungleSetSoundEnabled_t)(s3eBool enabled);
 typedef       void(*s3eVungleSetMuteIfMusicIsPlaying_t)(s3eBool state);
-typedef       void(*s3eVungleSetCustomCountDownText_t)(const char* text);
+typedef    s3eBool(*s3eVungleSetCustomCountDownText_t)(const char* text);
 typedef       void(*s3eVungleSetAlertBoxSettings_t)(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle);
 typedef       void(*s3eVungleSetAllowAutoRotate_t)(s3eBool allow);
 
@@ -216,12 +216,12 @@ void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* u
     return;
 }
 
-s3eResult s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
+void s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
 {
     IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle[5] func: s3eVungleGetCurrentStatusData"));
 
     if (!_extLoad())
-        return S3E_RESULT_ERROR;
+        return;
 
 #ifdef __mips
     // For MIPs platform we do not have asm code for stack switching 
@@ -229,13 +229,13 @@ s3eResult s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
-    s3eResult ret = g_Ext.m_s3eVungleGetCurrentStatusData(out_statusData);
+    g_Ext.m_s3eVungleGetCurrentStatusData(out_statusData);
 
 #ifdef __mips
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
-    return ret;
+    return;
 }
 
 s3eBool s3eVungleIsRunning()
@@ -502,12 +502,12 @@ void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state)
     return;
 }
 
-void s3eVungleSetCustomCountDownText(const char* text)
+s3eBool s3eVungleSetCustomCountDownText(const char* text)
 {
     IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle[18] func: s3eVungleSetCustomCountDownText"));
 
     if (!_extLoad())
-        return;
+        return S3E_FALSE;
 
 #ifdef __mips
     // For MIPs platform we do not have asm code for stack switching 
@@ -515,13 +515,13 @@ void s3eVungleSetCustomCountDownText(const char* text)
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
-    g_Ext.m_s3eVungleSetCustomCountDownText(text);
+    s3eBool ret = g_Ext.m_s3eVungleSetCustomCountDownText(text);
 
 #ifdef __mips
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
-    return;
+    return ret;
 }
 
 void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle)

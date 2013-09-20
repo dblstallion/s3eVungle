@@ -140,7 +140,7 @@ void s3eVungleStart(const char* pubAppID);
 
 void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* userData);
 
-s3eResult s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData);
+void s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData);
 
 s3eBool s3eVungleIsRunning();
 
@@ -166,7 +166,7 @@ void s3eVungleSetSoundEnabled(s3eBool enabled);
 
 void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state);
 
-void s3eVungleSetCustomCountDownText(const char* text);
+s3eBool s3eVungleSetCustomCountDownText(const char* text);
 
 void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle);
 

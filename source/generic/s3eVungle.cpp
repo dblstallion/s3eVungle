@@ -48,9 +48,9 @@ void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* u
 	s3eVungleStartWithUserData_platform(pubAppID, userData);
 }
 
-s3eResult s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
+void s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
 {
-	return s3eVungleGetCurrentStatusData_platform(out_statusData);
+	s3eVungleGetCurrentStatusData_platform(out_statusData);
 }
 
 s3eBool s3eVungleIsRunning()
@@ -113,9 +113,9 @@ void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state)
 	s3eVungleSetMuteIfMusicIsPlaying_platform(state);
 }
 
-void s3eVungleSetCustomCountDownText(const char* text)
+s3eBool s3eVungleSetCustomCountDownText(const char* text)
 {
-	s3eVungleSetCustomCountDownText_platform(text);
+	return s3eVungleSetCustomCountDownText_platform(text);
 }
 
 void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle)

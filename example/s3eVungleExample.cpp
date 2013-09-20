@@ -20,7 +20,24 @@ void initVungle()
         return;
     }
 
-    s3eDebugOutputString("Successfully loaded Vungle extension");
+    s3eVungleUserData data;
+    s3eVungleDefaultUserData(&data);
+    data.adOrientation = s3eVungleAdOrientationPortrait;
+    data.locationEnabled = true;
+
+    // Settings
+    s3eVungleSetAlertBoxSettings("Stop?", "You won't get your reward, man", "Stop!", "I want it");
+    s3eVungleSetAllowAutoRotate(true);
+    s3eVungleSetCacheSize(30);
+    s3eVungleSetCustomCountDownText("Your reward");
+    s3eVungleSetLogToStdout(true);
+    s3eVungleSetSoundEnabled(true);
+    s3eVungleSetMuteIfMusicIsPlaying(false);
+
+    s3eVungleStartWithUserData("523882d90f85ef927a00000a", &data);
+
+    s3eDebugOutputString("Successfully started Vungle extension");
+    s3eDebugOutputString(s3eVungleGetVersionString());
 }
 
 void buttonEvent(s3ePointerTouchEvent *event)
@@ -29,6 +46,11 @@ void buttonEvent(s3ePointerTouchEvent *event)
 
     if(event->m_Pressed)
     {
+        if(s3eVungleIsAdAvailable())
+        {
+            s3eDebugOutputString("Ad available, playing");
+            s3eVunglePlayModalAd(true, true);
+        }
     }
 }
 

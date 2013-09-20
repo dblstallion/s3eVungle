@@ -10,6 +10,7 @@
  * to nothing if this extension is not enabled in the loader
  * at build time.
  */
+#include "IwDebug.h"
 #include "s3eVungle_autodefs.h"
 #include "s3eEdk.h"
 #include "s3eVungle.h"
@@ -17,6 +18,42 @@
 extern s3eResult s3eVungleInit();
 extern void s3eVungleTerminate();
 
+
+// On platforms that use a seperate UI/OS thread we can autowrap functions
+// here.   Note that we can't use the S3E_USE_OS_THREAD define since this
+// code is oftern build standalone, outside the main loader build.
+#if defined I3D_OS_IPHONE || defined I3D_OS_OSX || defined I3D_OS_LINUX || defined I3D_OS_WINDOWS
+
+static void s3eVunglePlayModalAd_wrap(s3eBool animate, s3eBool showClose)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVunglePlayModalAd"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVunglePlayModalAd, 2, animate, showClose);
+}
+
+static void s3eVunglePlayIncentivizedAd_wrap(s3eBool animate, s3eBool showClose, const char* userTag)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVunglePlayIncentivizedAd"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVunglePlayIncentivizedAd, 3, animate, showClose, userTag);
+}
+
+static s3eBool s3eVungleSetCustomCountDownText_wrap(const char* text)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetCustomCountDownText"));
+    return (s3eBool)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetCustomCountDownText, 1, text);
+}
+
+static void s3eVungleSetAlertBoxSettings_wrap(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetAlertBoxSettings"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetAlertBoxSettings, 4, title, body, leftButtonTitle, rightButtonTitle);
+}
+
+#define s3eVunglePlayModalAd s3eVunglePlayModalAd_wrap
+#define s3eVunglePlayIncentivizedAd s3eVunglePlayIncentivizedAd_wrap
+#define s3eVungleSetCustomCountDownText s3eVungleSetCustomCountDownText_wrap
+#define s3eVungleSetAlertBoxSettings s3eVungleSetAlertBoxSettings_wrap
+
+#endif
 
 void s3eVungleRegisterExt()
 {
