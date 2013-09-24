@@ -115,32 +115,32 @@ s3eResult s3eVungleUnRegister(s3eVungleCallback callbackID, s3eCallback callback
 
 // Start functions
 // Note: Stop is automatically called
-void s3eVungleStart(const char* pubAppID)
-void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* userData)
+void s3eVungleStart(const char* pubAppID) run_on_os_thread
+void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* userData) run_on_os_thread
 
 // General utility functions
-void s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
-s3eBool s3eVungleIsRunning() S3E_FALSE
-void s3eVunglePrintCacheFiles()
-void s3eVunglePrintDeviceSettings()
-const char* s3eVungleGetVersionString() NULL
+void s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData) run_on_os_thread
+s3eBool s3eVungleIsRunning() S3E_FALSE run_on_os_thread
+void s3eVunglePrintCacheFiles() run_on_os_thread
+void s3eVunglePrintDeviceSettings() run_on_os_thread
+const char* s3eVungleGetVersionString() NULL run_on_os_thread
 
 // Ad display functions
-s3eBool s3eVungleIsAdAvailable() S3E_FALSE
+s3eBool s3eVungleIsAdAvailable() S3E_FALSE run_on_os_thread
 void s3eVunglePlayModalAd(s3eBool animate, s3eBool showClose) run_on_os_thread
 void s3eVunglePlayIncentivizedAd(s3eBool animate, s3eBool showClose, const char* userTag) run_on_os_thread
 
 // Cache size configuration functions
-int32 s3eVungleGetCacheSize() 0
-void s3eVungleSetCacheSize(int32 megabytes)
+int32 s3eVungleGetCacheSize() 0 run_on_os_thread
+void s3eVungleSetCacheSize(int32 megabytes) run_on_os_thread
 
 // Logging functions
-void s3eVungleSetLogToStdout(s3eBool state)
+void s3eVungleSetLogToStdout(s3eBool state) run_on_os_thread
 
 // Ad settings
-void s3eVungleSetSoundEnabled(s3eBool enabled)
-void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state)
+void s3eVungleSetSoundEnabled(s3eBool enabled) run_on_os_thread
+void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state) run_on_os_thread
 s3eBool s3eVungleSetCustomCountDownText(const char* text) S3E_FALSE run_on_os_thread
 void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle) run_on_os_thread
 
-void s3eVungleSetAllowAutoRotate(s3eBool allow)
+void s3eVungleSetAllowAutoRotate(s3eBool allow) run_on_os_thread

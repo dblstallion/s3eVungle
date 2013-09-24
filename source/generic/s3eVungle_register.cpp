@@ -24,6 +24,54 @@ extern void s3eVungleTerminate();
 // code is oftern build standalone, outside the main loader build.
 #if defined I3D_OS_IPHONE || defined I3D_OS_OSX || defined I3D_OS_LINUX || defined I3D_OS_WINDOWS
 
+static void s3eVungleStart_wrap(const char* pubAppID)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleStart"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleStart, 1, pubAppID);
+}
+
+static void s3eVungleStartWithUserData_wrap(const char* pubAppID, const s3eVungleUserData* userData)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleStartWithUserData"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleStartWithUserData, 2, pubAppID, userData);
+}
+
+static void s3eVungleGetCurrentStatusData_wrap(s3eVungleStatusData* out_statusData)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleGetCurrentStatusData"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleGetCurrentStatusData, 1, out_statusData);
+}
+
+static s3eBool s3eVungleIsRunning_wrap()
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleIsRunning"));
+    return (s3eBool)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleIsRunning, 0);
+}
+
+static void s3eVunglePrintCacheFiles_wrap()
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVunglePrintCacheFiles"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVunglePrintCacheFiles, 0);
+}
+
+static void s3eVunglePrintDeviceSettings_wrap()
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVunglePrintDeviceSettings"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVunglePrintDeviceSettings, 0);
+}
+
+static const char* s3eVungleGetVersionString_wrap()
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleGetVersionString"));
+    return (const char*)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleGetVersionString, 0);
+}
+
+static s3eBool s3eVungleIsAdAvailable_wrap()
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleIsAdAvailable"));
+    return (s3eBool)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleIsAdAvailable, 0);
+}
+
 static void s3eVunglePlayModalAd_wrap(s3eBool animate, s3eBool showClose)
 {
     IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVunglePlayModalAd"));
@@ -34,6 +82,36 @@ static void s3eVunglePlayIncentivizedAd_wrap(s3eBool animate, s3eBool showClose,
 {
     IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVunglePlayIncentivizedAd"));
     s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVunglePlayIncentivizedAd, 3, animate, showClose, userTag);
+}
+
+static int32 s3eVungleGetCacheSize_wrap()
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleGetCacheSize"));
+    return (int32)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleGetCacheSize, 0);
+}
+
+static void s3eVungleSetCacheSize_wrap(int32 megabytes)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetCacheSize"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetCacheSize, 1, megabytes);
+}
+
+static void s3eVungleSetLogToStdout_wrap(s3eBool state)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetLogToStdout"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetLogToStdout, 1, state);
+}
+
+static void s3eVungleSetSoundEnabled_wrap(s3eBool enabled)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetSoundEnabled"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetSoundEnabled, 1, enabled);
+}
+
+static void s3eVungleSetMuteIfMusicIsPlaying_wrap(s3eBool state)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetMuteIfMusicIsPlaying"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetMuteIfMusicIsPlaying, 1, state);
 }
 
 static s3eBool s3eVungleSetCustomCountDownText_wrap(const char* text)
@@ -48,10 +126,30 @@ static void s3eVungleSetAlertBoxSettings_wrap(const char* title, const char* bod
     s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetAlertBoxSettings, 4, title, body, leftButtonTitle, rightButtonTitle);
 }
 
+static void s3eVungleSetAllowAutoRotate_wrap(s3eBool allow)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle func on main thread: s3eVungleSetAllowAutoRotate"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eVungleSetAllowAutoRotate, 1, allow);
+}
+
+#define s3eVungleStart s3eVungleStart_wrap
+#define s3eVungleStartWithUserData s3eVungleStartWithUserData_wrap
+#define s3eVungleGetCurrentStatusData s3eVungleGetCurrentStatusData_wrap
+#define s3eVungleIsRunning s3eVungleIsRunning_wrap
+#define s3eVunglePrintCacheFiles s3eVunglePrintCacheFiles_wrap
+#define s3eVunglePrintDeviceSettings s3eVunglePrintDeviceSettings_wrap
+#define s3eVungleGetVersionString s3eVungleGetVersionString_wrap
+#define s3eVungleIsAdAvailable s3eVungleIsAdAvailable_wrap
 #define s3eVunglePlayModalAd s3eVunglePlayModalAd_wrap
 #define s3eVunglePlayIncentivizedAd s3eVunglePlayIncentivizedAd_wrap
+#define s3eVungleGetCacheSize s3eVungleGetCacheSize_wrap
+#define s3eVungleSetCacheSize s3eVungleSetCacheSize_wrap
+#define s3eVungleSetLogToStdout s3eVungleSetLogToStdout_wrap
+#define s3eVungleSetSoundEnabled s3eVungleSetSoundEnabled_wrap
+#define s3eVungleSetMuteIfMusicIsPlaying s3eVungleSetMuteIfMusicIsPlaying_wrap
 #define s3eVungleSetCustomCountDownText s3eVungleSetCustomCountDownText_wrap
 #define s3eVungleSetAlertBoxSettings s3eVungleSetAlertBoxSettings_wrap
+#define s3eVungleSetAllowAutoRotate s3eVungleSetAllowAutoRotate_wrap
 
 #endif
 
