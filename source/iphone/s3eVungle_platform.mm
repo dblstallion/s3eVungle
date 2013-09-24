@@ -14,29 +14,6 @@
 #import <UIKit/UIKit.h>
 #import "vunglepub.h"
 
-// Asset loader
-@interface VGFileAssetLoader : NSObject <VGAssetLoader>
-- (NSData*)vungleLoadAsset:(NSString*)path;
-- (UIImage*)vungleLoadImage:(NSString*)path;
-@end
-
-@implementation VGFileAssetLoader
-- (NSData*)vungleLoadAsset:(NSString*)path
-{
-	return [NSData dataWithContentsOfFile:path];
-}
-
-- (UIImage*)vungleLoadImage:(NSString*)path
-{
-	NSData* data = [self vungleLoadAsset:path];
-	if (data)
-    {
-		return [UIImage imageWithData:data];
-	}
-	return nil;
-}
-@end
-
 @interface S3EVunglePubDelegate : NSObject <VGVunglePubDelegate>
 @end
 
@@ -103,10 +80,6 @@ s3eResult s3eVungleInit_platform()
 
     [VGVunglePub setDelegate:gDelegate];
 
-    VGFileAssetLoader* assetLoader = [[VGFileAssetLoader alloc] init];
-    [VGVunglePub setAssetLoader:assetLoader];
-    [assetLoader release];
-
     return S3E_RESULT_SUCCESS;
 }
 
@@ -133,12 +106,12 @@ void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)
 
 s3eResult s3eVungleRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn, void* userData)
 {
-    return S3E_RESULT_ERROR;
+    return s3eEdkCallbacksRegister(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MAX, callbackID, callbackFn, userData, false);
 }
 
 s3eResult s3eVungleUnRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn)
 {
-    return S3E_RESULT_ERROR;
+    return s3eEdkCallbacksUnRegister(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MAX, callbackID, callbackFn);
 }
 
 void s3eVungleStart_platform(const char* pubAppID)
