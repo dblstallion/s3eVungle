@@ -37,8 +37,72 @@
 }
 @end
 
+@interface S3EVunglePubDelegate : NSObject <VGVunglePubDelegate>
+@end
+
+@implementation S3EVunglePubDelegate
+-(void)vungleMoviePlayed:(VGPlayData*)playData
+{
+    if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MoviePlayed))
+	{
+		s3eVunglePlayData pd;
+        pd.start = playData.start;
+        pd.movieTotal = playData.movieTotal;
+        pd.movieViewed = playData.movieViewed;
+        pd.playedFull = [playData playedFull];
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MoviePlayed, &pd, sizeof(pd));
+	}
+}
+
+-(void)vungleStatusUpdate:(VGStatusData*)statusData
+{
+    if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_StatusUpdate))
+	{
+		s3eVungleStatusData sd;
+        sd.videoAdsCached = statusData.videoAdsCached;
+        sd.videoAdsUnviewed = statusData.videoAdsUnviewed;
+        sd.status = (s3eVungleStatus)statusData.status;
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_StatusUpdate, &sd, sizeof(sd));
+	}
+}
+
+-(void)vungleViewDidDisappear:(UIViewController*)viewController
+{
+    if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewDidDisappear))
+	{
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewDidDisappear);
+	}
+}
+
+-(void)vungleViewWillAppear:(UIViewController*)viewController
+{
+    if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewWillAppear))
+	{
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewWillAppear);
+	}
+}
+
+-(void)vungleAppStoreViewDidDisappear
+{
+    if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_AppStoreViewDidDisappear))
+	{
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_AppStoreViewDidDisappear);
+	}
+}
+@end
+
+// the Vungle Delegate singleton
+static S3EVunglePubDelegate *gDelegate = NULL;
+
 s3eResult s3eVungleInit_platform()
 {
+    if (!gDelegate)
+    {
+        gDelegate = [[S3EVunglePubDelegate alloc] init];
+    }
+
+    [VGVunglePub setDelegate:gDelegate];
+
     VGFileAssetLoader* assetLoader = [[VGFileAssetLoader alloc] init];
     [VGVunglePub setAssetLoader:assetLoader];
     [assetLoader release];
@@ -49,6 +113,12 @@ s3eResult s3eVungleInit_platform()
 void s3eVungleTerminate_platform()
 {
     [VGVunglePub stop];
+
+    if (gDelegate)
+    {
+        [gDelegate release];
+        gDelegate = NULL;
+    }
 }
 
 void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)

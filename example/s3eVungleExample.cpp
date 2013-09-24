@@ -9,6 +9,33 @@
 #include <string>
 #include <sstream>
 
+void vungleMoviePlayed(s3eVunglePlayData *playData, void *userData)
+{
+    s3eDebugOutputString("Vungle movie played");
+    printf("movieTotal: %f, movieViewed: %f, playedFull: %d, start: %f\n", playData->movieTotal, playData->movieViewed, playData->playedFull, playData->start);
+}
+
+void vungleStatusUpdate(s3eVungleStatusData *statusData, void *userData)
+{
+    s3eDebugOutputString("Vungle status update");
+    printf("status: %d, videoAdsCached: %d, videoAdsUnviewed: %d\n", statusData->status, statusData->videoAdsCached, statusData->videoAdsUnviewed);
+}
+
+void vungleViewDidDisappear(void *statusData, void *userData)
+{
+    s3eDebugOutputString("Vungle view did disappear");
+}
+
+void vungleViewWillAppear(void *statusData, void *userData)
+{
+    s3eDebugOutputString("Vungle view will appear");
+}
+
+void vungleAppStoreViewDidDisappear(void *statusData, void *userData)
+{
+    s3eDebugOutputString("Vungle app store view did disappear");
+}
+
 void initVungle()
 {
     IW_CALLSTACK("initVungle");
@@ -25,10 +52,16 @@ void initVungle()
     data.adOrientation = s3eVungleAdOrientationPortrait;
     data.locationEnabled = true;
 
+    s3eVungleRegister(s3eVungleCallback_MoviePlayed, (s3eCallback)vungleMoviePlayed, NULL);
+    s3eVungleRegister(s3eVungleCallback_StatusUpdate, (s3eCallback)vungleStatusUpdate, NULL);
+    s3eVungleRegister(s3eVungleCallback_ViewDidDisappear, (s3eCallback)vungleViewDidDisappear, NULL);
+    s3eVungleRegister(s3eVungleCallback_ViewWillAppear, (s3eCallback)vungleViewWillAppear, NULL);
+    s3eVungleRegister(s3eVungleCallback_AppStoreViewDidDisappear, (s3eCallback)vungleAppStoreViewDidDisappear, NULL);
+
     // Settings
     s3eVungleSetAlertBoxSettings("Stop?", "You won't get your reward, man", "Stop!", "I want it");
     s3eVungleSetAllowAutoRotate(true);
-    s3eVungleSetCacheSize(30);
+    s3eVungleSetCacheSize(10);
     s3eVungleSetCustomCountDownText("Your reward");
     s3eVungleSetLogToStdout(true);
     s3eVungleSetSoundEnabled(true);
