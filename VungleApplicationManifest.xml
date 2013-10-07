@@ -1,0 +1,6 @@
+<!-- required activity for playback of Vungle video ads -->
+<activity
+  android:name="com.vungle.sdk.VungleAdvert"
+  android:configChanges="keyboardHidden|orientation|screenSize"
+  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+/>
