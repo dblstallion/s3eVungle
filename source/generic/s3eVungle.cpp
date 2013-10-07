@@ -11,6 +11,9 @@ This file should perform any platform-indepedentent functionality
 
 
 #include "s3eVungle_internal.h"
+
+#include "s3eEdk.h"
+
 s3eResult s3eVungleInit()
 {
     //Add any generic initialisation code here
@@ -30,12 +33,12 @@ void s3eVungleDefaultUserData(s3eVungleUserData* out_userData)
 
 s3eResult s3eVungleRegister(s3eVungleCallback callbackID, s3eCallback callbackFn, void* userData)
 {
-	return s3eVungleRegister_platform(callbackID, callbackFn, userData);
+    return s3eEdkCallbacksRegister(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MAX, callbackID, callbackFn, userData, false);
 }
 
 s3eResult s3eVungleUnRegister(s3eVungleCallback callbackID, s3eCallback callbackFn)
 {
-	return s3eVungleUnRegister_platform(callbackID, callbackFn);
+    return s3eEdkCallbacksUnRegister(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MAX, callbackID, callbackFn);
 }
 
 void s3eVungleStart(const char* pubAppID)

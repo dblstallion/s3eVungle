@@ -44,10 +44,6 @@ void s3eVungleTerminate();
 void s3eVungleTerminate_platform();
 void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData);
 
-s3eResult s3eVungleRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn, void* userData);
-
-s3eResult s3eVungleUnRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn);
-
 void s3eVungleStart_platform(const char* pubAppID);
 
 void s3eVungleStartWithUserData_platform(const char* pubAppID, const s3eVungleUserData* userData);

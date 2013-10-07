@@ -55,223 +55,223 @@ Memory map
 .interp         0x00000114       0x13
  ** fill        0x00000114       0x13
 
-.dynsym         0x00000128      0x160
- ** dynsym      0x00000128      0x160
+.dynsym         0x00000128      0x1a0
+ ** dynsym      0x00000128      0x1a0
 
-.dynstr         0x00000288      0x187
+.dynstr         0x000002c8      0x1ec
  ** string table
-                0x00000288      0x187
+                0x000002c8      0x1ec
 
-.hash           0x00000410       0xa4
- ** hash        0x00000410       0xa4
+.hash           0x000004b4       0xb4
+ ** hash        0x000004b4       0xb4
 
-.rel.dyn        0x000004b4       0xc0
+.rel.dyn        0x00000568      0x108
  ** dynamic relocs
-                0x000004b4       0xc0
+                0x00000568      0x108
 
-.rel.plt        0x00000574       0x70
+.rel.plt        0x00000670       0x90
  ** dynamic relocs
-                0x00000574       0x70
+                0x00000670       0x90
 
-.plt            0x000005e4       0xbc
- ** PLT         0x000005e4       0xbc
+.plt            0x00000700       0xec
+ ** PLT         0x00000700       0xec
 
-.text           0x000006a0      0xccc
- .text.exit     0x000006a0       0x10 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x000006a0                __on_dlclose
+.text           0x000007ec      0xe78
+ .text.exit     0x000007ec       0x10 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x000007ec                __on_dlclose
+ .text._ZL22s3eVungle_ViewCallbackP7_JNIEnvP8_jobjectdd
+                0x000007fc       0x88 release\s3eVungle_platform.os
+ .text._ZL21s3eVungle_EndCallbackP7_JNIEnvP8_jobject
+                0x00000884       0x50 release\s3eVungle_platform.os
+ .text._ZL23s3eVungle_StartCallbackP7_JNIEnvP8_jobject
+                0x000008d4       0x50 release\s3eVungle_platform.os
  .text._ZL27s3eEdkAndroidFindClass_realPKc
-                0x000006b0       0xb4 release\s3eVungle_platform.os
+                0x00000924       0xb4 release\s3eVungle_platform.os
  .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x00000764       0x38 release\s3eVungle_platform.os
-                0x00000764                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+                0x000009d8       0x38 release\s3eVungle_platform.os
+                0x000009d8                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
  .text._ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
-                0x0000079c       0x38 release\s3eVungle_platform.os
-                0x0000079c                _JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+                0x00000a10       0x38 release\s3eVungle_platform.os
+                0x00000a10                _JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
  .text._ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
-                0x000007d4       0x38 release\s3eVungle_platform.os
-                0x000007d4                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
+                0x00000a48       0x38 release\s3eVungle_platform.os
+                0x00000a48                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
  .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
-                0x0000080c       0x38 release\s3eVungle_platform.os
-                0x0000080c                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
+                0x00000a80       0x38 release\s3eVungle_platform.os
+                0x00000a80                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
  .text._Z18applicationResumedPvS_
-                0x00000844       0x50 release\s3eVungle_platform.os
-                0x00000844                applicationResumed(void*, void*)
+                0x00000ab8       0x50 release\s3eVungle_platform.os
+                0x00000ab8                applicationResumed(void*, void*)
  .text._Z17applicationPausedPvS_
-                0x00000894       0x54 release\s3eVungle_platform.os
-                0x00000894                applicationPaused(void*, void*)
+                0x00000b08       0x54 release\s3eVungle_platform.os
+                0x00000b08                applicationPaused(void*, void*)
  .text._Z22s3eVungleInit_platformv
-                0x000008e8      0x384 release\s3eVungle_platform.os
-                0x000008e8                s3eVungleInit_platform()
+                0x00000b5c      0x3c0 release\s3eVungle_platform.os
+                0x00000b5c                s3eVungleInit_platform()
  .text._Z27s3eVungleTerminate_platformv
-                0x00000c6c       0x4c release\s3eVungle_platform.os
-                0x00000c6c                s3eVungleTerminate_platform()
+                0x00000f1c       0x4c release\s3eVungle_platform.os
+                0x00000f1c                s3eVungleTerminate_platform()
  .text._Z33s3eVungleDefaultUserData_platformP17s3eVungleUserData
-                0x00000cb8       0x18 release\s3eVungle_platform.os
-                0x00000cb8                s3eVungleDefaultUserData_platform(s3eVungleUserData*)
- .text._Z26s3eVungleRegister_platform17s3eVungleCallbackPFiPvS0_ES0_
-                0x00000cd0        0x8 release\s3eVungle_platform.os
-                0x00000cd0                s3eVungleRegister_platform(s3eVungleCallback, int (*)(void*, void*), void*)
- .text._Z28s3eVungleUnRegister_platform17s3eVungleCallbackPFiPvS0_E
-                0x00000cd8        0x8 release\s3eVungle_platform.os
-                0x00000cd8                s3eVungleUnRegister_platform(s3eVungleCallback, int (*)(void*, void*))
+                0x00000f68       0x18 release\s3eVungle_platform.os
+                0x00000f68                s3eVungleDefaultUserData_platform(s3eVungleUserData*)
  .text._Z23s3eVungleStart_platformPKc
-                0x00000ce0       0x70 release\s3eVungle_platform.os
-                0x00000ce0                s3eVungleStart_platform(char const*)
+                0x00000f80       0x70 release\s3eVungle_platform.os
+                0x00000f80                s3eVungleStart_platform(char const*)
  .text._Z35s3eVungleStartWithUserData_platformPKcPK17s3eVungleUserData
-                0x00000d50       0x70 release\s3eVungle_platform.os
-                0x00000d50                s3eVungleStartWithUserData_platform(char const*, s3eVungleUserData const*)
+                0x00000ff0       0x70 release\s3eVungle_platform.os
+                0x00000ff0                s3eVungleStartWithUserData_platform(char const*, s3eVungleUserData const*)
  .text._Z38s3eVungleGetCurrentStatusData_platformP19s3eVungleStatusData
-                0x00000dc0       0x40 release\s3eVungle_platform.os
-                0x00000dc0                s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData*)
+                0x00001060       0x40 release\s3eVungle_platform.os
+                0x00001060                s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData*)
  .text._Z27s3eVungleIsRunning_platformv
-                0x00000e00        0x8 release\s3eVungle_platform.os
-                0x00000e00                s3eVungleIsRunning_platform()
+                0x000010a0        0x8 release\s3eVungle_platform.os
+                0x000010a0                s3eVungleIsRunning_platform()
  .text._Z33s3eVunglePrintCacheFiles_platformv
-                0x00000e08        0x4 release\s3eVungle_platform.os
-                0x00000e08                s3eVunglePrintCacheFiles_platform()
+                0x000010a8        0x4 release\s3eVungle_platform.os
+                0x000010a8                s3eVunglePrintCacheFiles_platform()
  .text._Z37s3eVunglePrintDeviceSettings_platformv
-                0x00000e0c        0x4 release\s3eVungle_platform.os
-                0x00000e0c                s3eVunglePrintDeviceSettings_platform()
+                0x000010ac        0x4 release\s3eVungle_platform.os
+                0x000010ac                s3eVunglePrintDeviceSettings_platform()
  .text._Z34s3eVungleGetVersionString_platformv
-                0x00000e10       0xa8 release\s3eVungle_platform.os
-                0x00000e10                s3eVungleGetVersionString_platform()
+                0x000010b0       0xa8 release\s3eVungle_platform.os
+                0x000010b0                s3eVungleGetVersionString_platform()
  .text._Z31s3eVungleIsAdAvailable_platformv
-                0x00000eb8       0x50 release\s3eVungle_platform.os
-                0x00000eb8                s3eVungleIsAdAvailable_platform()
+                0x00001158       0x50 release\s3eVungle_platform.os
+                0x00001158                s3eVungleIsAdAvailable_platform()
  .text._Z29s3eVunglePlayModalAd_platformhh
-                0x00000f08       0x60 release\s3eVungle_platform.os
-                0x00000f08                s3eVunglePlayModalAd_platform(unsigned char, unsigned char)
+                0x000011a8       0x60 release\s3eVungle_platform.os
+                0x000011a8                s3eVunglePlayModalAd_platform(unsigned char, unsigned char)
  .text._Z36s3eVunglePlayIncentivizedAd_platformhhPKc
-                0x00000f68       0x80 release\s3eVungle_platform.os
-                0x00000f68                s3eVunglePlayIncentivizedAd_platform(unsigned char, unsigned char, char const*)
+                0x00001208       0x80 release\s3eVungle_platform.os
+                0x00001208                s3eVunglePlayIncentivizedAd_platform(unsigned char, unsigned char, char const*)
  .text._Z30s3eVungleGetCacheSize_platformv
-                0x00000fe8        0x8 release\s3eVungle_platform.os
-                0x00000fe8                s3eVungleGetCacheSize_platform()
+                0x00001288        0x8 release\s3eVungle_platform.os
+                0x00001288                s3eVungleGetCacheSize_platform()
  .text._Z30s3eVungleSetCacheSize_platformi
-                0x00000ff0        0x4 release\s3eVungle_platform.os
-                0x00000ff0                s3eVungleSetCacheSize_platform(int)
+                0x00001290        0x4 release\s3eVungle_platform.os
+                0x00001290                s3eVungleSetCacheSize_platform(int)
  .text._Z32s3eVungleSetLogToStdout_platformh
-                0x00000ff4        0x4 release\s3eVungle_platform.os
-                0x00000ff4                s3eVungleSetLogToStdout_platform(unsigned char)
+                0x00001294        0x4 release\s3eVungle_platform.os
+                0x00001294                s3eVungleSetLogToStdout_platform(unsigned char)
  .text._Z33s3eVungleSetSoundEnabled_platformh
-                0x00000ff8       0x58 release\s3eVungle_platform.os
-                0x00000ff8                s3eVungleSetSoundEnabled_platform(unsigned char)
+                0x00001298       0x58 release\s3eVungle_platform.os
+                0x00001298                s3eVungleSetSoundEnabled_platform(unsigned char)
  .text._Z41s3eVungleSetMuteIfMusicIsPlaying_platformh
-                0x00001050        0x4 release\s3eVungle_platform.os
-                0x00001050                s3eVungleSetMuteIfMusicIsPlaying_platform(unsigned char)
+                0x000012f0        0x4 release\s3eVungle_platform.os
+                0x000012f0                s3eVungleSetMuteIfMusicIsPlaying_platform(unsigned char)
  .text._Z40s3eVungleSetCustomCountDownText_platformPKc
-                0x00001054        0x8 release\s3eVungle_platform.os
-                0x00001054                s3eVungleSetCustomCountDownText_platform(char const*)
+                0x000012f4        0x8 release\s3eVungle_platform.os
+                0x000012f4                s3eVungleSetCustomCountDownText_platform(char const*)
  .text._Z37s3eVungleSetAlertBoxSettings_platformPKcS0_S0_S0_
-                0x0000105c        0x4 release\s3eVungle_platform.os
-                0x0000105c                s3eVungleSetAlertBoxSettings_platform(char const*, char const*, char const*, char const*)
+                0x000012fc        0x4 release\s3eVungle_platform.os
+                0x000012fc                s3eVungleSetAlertBoxSettings_platform(char const*, char const*, char const*, char const*)
  .text._Z36s3eVungleSetAllowAutoRotate_platformh
-                0x00001060       0x58 release\s3eVungle_platform.os
-                0x00001060                s3eVungleSetAllowAutoRotate_platform(unsigned char)
+                0x00001300       0x58 release\s3eVungle_platform.os
+                0x00001300                s3eVungleSetAllowAutoRotate_platform(unsigned char)
  .text._Z13s3eVungleInitv
-                0x000010b8        0x4 release\s3eVungle.os
-                0x000010b8                s3eVungleInit()
+                0x00001358        0x4 release\s3eVungle.os
+                0x00001358                s3eVungleInit()
  .text._Z18s3eVungleTerminatev
-                0x000010bc        0x4 release\s3eVungle.os
-                0x000010bc                s3eVungleTerminate()
+                0x0000135c        0x4 release\s3eVungle.os
+                0x0000135c                s3eVungleTerminate()
  .text.s3eVungleDefaultUserData
-                0x000010c0        0x4 release\s3eVungle.os
-                0x000010c0                s3eVungleDefaultUserData
+                0x00001360        0x4 release\s3eVungle.os
+                0x00001360                s3eVungleDefaultUserData
  .text.s3eVungleRegister
-                0x000010c4        0x4 release\s3eVungle.os
-                0x000010c4                s3eVungleRegister
+                0x00001364       0x30 release\s3eVungle.os
+                0x00001364                s3eVungleRegister
  .text.s3eVungleUnRegister
-                0x000010c8        0x4 release\s3eVungle.os
-                0x000010c8                s3eVungleUnRegister
+                0x00001394       0x30 release\s3eVungle.os
+                0x00001394                s3eVungleUnRegister
  .text.s3eVungleStart
-                0x000010cc        0x4 release\s3eVungle.os
-                0x000010cc                s3eVungleStart
+                0x000013c4        0x4 release\s3eVungle.os
+                0x000013c4                s3eVungleStart
  .text.s3eVungleStartWithUserData
-                0x000010d0        0x4 release\s3eVungle.os
-                0x000010d0                s3eVungleStartWithUserData
+                0x000013c8        0x4 release\s3eVungle.os
+                0x000013c8                s3eVungleStartWithUserData
  .text.s3eVungleGetCurrentStatusData
-                0x000010d4        0x4 release\s3eVungle.os
-                0x000010d4                s3eVungleGetCurrentStatusData
+                0x000013cc        0x4 release\s3eVungle.os
+                0x000013cc                s3eVungleGetCurrentStatusData
  .text.s3eVungleIsRunning
-                0x000010d8        0x4 release\s3eVungle.os
-                0x000010d8                s3eVungleIsRunning
+                0x000013d0        0x4 release\s3eVungle.os
+                0x000013d0                s3eVungleIsRunning
  .text.s3eVunglePrintCacheFiles
-                0x000010dc        0x4 release\s3eVungle.os
-                0x000010dc                s3eVunglePrintCacheFiles
+                0x000013d4        0x4 release\s3eVungle.os
+                0x000013d4                s3eVunglePrintCacheFiles
  .text.s3eVunglePrintDeviceSettings
-                0x000010e0        0x4 release\s3eVungle.os
-                0x000010e0                s3eVunglePrintDeviceSettings
+                0x000013d8        0x4 release\s3eVungle.os
+                0x000013d8                s3eVunglePrintDeviceSettings
  .text.s3eVungleGetVersionString
-                0x000010e4        0x4 release\s3eVungle.os
-                0x000010e4                s3eVungleGetVersionString
+                0x000013dc        0x4 release\s3eVungle.os
+                0x000013dc                s3eVungleGetVersionString
  .text.s3eVungleIsAdAvailable
-                0x000010e8        0x4 release\s3eVungle.os
-                0x000010e8                s3eVungleIsAdAvailable
+                0x000013e0        0x4 release\s3eVungle.os
+                0x000013e0                s3eVungleIsAdAvailable
  .text.s3eVunglePlayModalAd
-                0x000010ec        0x4 release\s3eVungle.os
-                0x000010ec                s3eVunglePlayModalAd
+                0x000013e4        0x4 release\s3eVungle.os
+                0x000013e4                s3eVunglePlayModalAd
  .text.s3eVunglePlayIncentivizedAd
-                0x000010f0        0x4 release\s3eVungle.os
-                0x000010f0                s3eVunglePlayIncentivizedAd
+                0x000013e8        0x4 release\s3eVungle.os
+                0x000013e8                s3eVunglePlayIncentivizedAd
  .text.s3eVungleGetCacheSize
-                0x000010f4        0x4 release\s3eVungle.os
-                0x000010f4                s3eVungleGetCacheSize
+                0x000013ec        0x4 release\s3eVungle.os
+                0x000013ec                s3eVungleGetCacheSize
  .text.s3eVungleSetCacheSize
-                0x000010f8        0x4 release\s3eVungle.os
-                0x000010f8                s3eVungleSetCacheSize
+                0x000013f0        0x4 release\s3eVungle.os
+                0x000013f0                s3eVungleSetCacheSize
  .text.s3eVungleSetLogToStdout
-                0x000010fc        0x4 release\s3eVungle.os
-                0x000010fc                s3eVungleSetLogToStdout
+                0x000013f4        0x4 release\s3eVungle.os
+                0x000013f4                s3eVungleSetLogToStdout
  .text.s3eVungleSetSoundEnabled
-                0x00001100        0x4 release\s3eVungle.os
-                0x00001100                s3eVungleSetSoundEnabled
+                0x000013f8        0x4 release\s3eVungle.os
+                0x000013f8                s3eVungleSetSoundEnabled
  .text.s3eVungleSetMuteIfMusicIsPlaying
-                0x00001104        0x4 release\s3eVungle.os
-                0x00001104                s3eVungleSetMuteIfMusicIsPlaying
+                0x000013fc        0x4 release\s3eVungle.os
+                0x000013fc                s3eVungleSetMuteIfMusicIsPlaying
  .text.s3eVungleSetCustomCountDownText
-                0x00001108        0x4 release\s3eVungle.os
-                0x00001108                s3eVungleSetCustomCountDownText
+                0x00001400        0x4 release\s3eVungle.os
+                0x00001400                s3eVungleSetCustomCountDownText
  .text.s3eVungleSetAlertBoxSettings
-                0x0000110c        0x4 release\s3eVungle.os
-                0x0000110c                s3eVungleSetAlertBoxSettings
+                0x00001404        0x4 release\s3eVungle.os
+                0x00001404                s3eVungleSetAlertBoxSettings
  .text.s3eVungleSetAllowAutoRotate
-                0x00001110        0x4 release\s3eVungle.os
-                0x00001110                s3eVungleSetAllowAutoRotate
+                0x00001408        0x4 release\s3eVungle.os
+                0x00001408                s3eVungleSetAllowAutoRotate
  .text._ZL32s3eVunglePlayIncentivizedAd_wraphhPKc
-                0x00001114       0x40 release\s3eVungle_register.os
+                0x0000140c       0x40 release\s3eVungle_register.os
  .text._ZL25s3eVunglePlayModalAd_wraphh
-                0x00001154       0x28 release\s3eVungle_register.os
+                0x0000144c       0x28 release\s3eVungle_register.os
  .text.RegisterExt
-                0x0000117c      0x1c0 release\s3eVungle_register.os
-                0x0000117c                RegisterExt
+                0x00001474      0x1c0 release\s3eVungle_register.os
+                0x00001474                RegisterExt
  .text.s3eEdkThreadRunOnOS
                 0xffffffffffffffff       0x30 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
-                0x0000133c                s3eEdkThreadRunOnOS
+                0x00001634                s3eEdkThreadRunOnOS
 
-.rodata         0x0000136c      0x144
+.rodata         0x00001664      0x178
  .rodata.str1.4
-                0x0000136c      0x138 release\s3eVungle_platform.os
+                0x00001664      0x16c release\s3eVungle_platform.os
  .rodata.str1.4
-                0x000014a4        0xc release\s3eVungle_register.os
+                0x000017d0        0xc release\s3eVungle_register.os
 
-.fini_array     0x00002e74        0x8
- .fini_array    0x00002e74        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .fini_array    0x00002e78        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+.fini_array     0x00002e64        0x8
+ .fini_array    0x00002e64        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ .fini_array    0x00002e68        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 
-.init_array     0x00002e7c        0x4
- .init_array    0x00002e7c        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+.init_array     0x00002e6c        0x4
+ .init_array    0x00002e6c        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 
-.dynamic        0x00002e80       0xe0
- ** dynamic     0x00002e80       0xe0
+.dynamic        0x00002e70       0xe0
+ ** dynamic     0x00002e70       0xe0
 
-.got            0x00002f60       0xa0
- ** GOT         0x00002f60       0x5c
- ** GOT PLT     0x00002fbc       0x44
+.got            0x00002f50       0xb0
+ ** GOT         0x00002f50       0x5c
+ ** GOT PLT     0x00002fac       0x54
 
-.data           0x00003000        0x8
+.data           0x00003000       0x2c
  .data          0x00003000        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
                 0x00003000                __dso_handle
- .data          0x00003004        0x4 release\s3eVungle_platform.os
+ .data          0x00003004       0x28 release\s3eVungle_platform.os
 
-.bss            0x00003008       0x2c
- .bss           0x00003008       0x2c release\s3eVungle_platform.os
+.bss            0x0000302c       0x2c
+ .bss           0x0000302c       0x2c release\s3eVungle_platform.os

@@ -58,6 +58,10 @@ int32 applicationResumed(void* systemData, void* userData)
 	return 0;
 }
 
+static void s3eVungle_StartCallback(JNIEnv *env, jobject _this);
+static void s3eVungle_EndCallback(JNIEnv *env, jobject _this);
+static void s3eVungle_ViewCallback(JNIEnv *env, jobject _this, double watchedSeconds, double totalSeconds);
+
 s3eResult s3eVungleInit_platform()
 {
 	//Alloc buffer for returning strings
@@ -67,6 +71,13 @@ s3eResult s3eVungleInit_platform()
     JNIEnv* env = s3eEdkJNIGetEnv();
     jobject obj = NULL;
     jmethodID cons = NULL;
+	
+	const JNINativeMethod nativeMethodDefs[] =
+    {
+        {"StartCallback",	"()V",		(void *)&s3eVungle_StartCallback},
+        {"EndCallback",		"()V",		(void *)&s3eVungle_EndCallback},
+        {"ViewCallback",	"(DD)V",	(void *)&s3eVungle_ViewCallback},
+    };
 
     // Get the extension class
     jclass cls = s3eEdkAndroidFindClass("s3eVungle");
@@ -119,7 +130,8 @@ s3eResult s3eVungleInit_platform()
 	g_onResume = env->GetMethodID(cls, "onResume", "()V");
     if (!g_onResume)
         goto fail;
-
+	
+	env->RegisterNatives(cls, nativeMethodDefs, sizeof(nativeMethodDefs)/sizeof(nativeMethodDefs[0]));
 
     IwTrace(VUNGLE, ("VUNGLE init success"));
     g_Obj = env->NewGlobalRef(obj);
@@ -157,22 +169,41 @@ void s3eVungleTerminate_platform()
 	s3eDeviceUnRegister(S3E_DEVICE_UNPAUSE, applicationPaused);
 }
 
+static void s3eVungle_StartCallback(JNIEnv *env, jobject _this)
+{
+	if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewWillAppear))
+	{
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewWillAppear);
+	}
+}
+
+static void s3eVungle_EndCallback(JNIEnv *env, jobject _this)
+{
+	if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_AppStoreViewDidDisappear))
+	{
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_ViewDidDisappear);
+	}
+}
+
+static void s3eVungle_ViewCallback(JNIEnv *env, jobject _this, double watchedSeconds, double totalSeconds)
+{
+	if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MoviePlayed))
+	{
+		s3eVunglePlayData pd;
+        pd.start = 0;
+        pd.movieTotal = totalSeconds;
+        pd.movieViewed = watchedSeconds;
+        pd.playedFull = watchedSeconds >= totalSeconds;
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MoviePlayed, &pd, sizeof(pd));
+	}
+}
+
 void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)
 {
 	out_userData->age = 0;
 	out_userData->gender = s3eVungleGenderUnknown;
 	out_userData->adOrientation = s3eVungleAdOrientationUnknown;
 	out_userData->locationEnabled = false;
-}
-
-s3eResult s3eVungleRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn, void* userData)
-{
-	return S3E_RESULT_ERROR;
-}
-
-s3eResult s3eVungleUnRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn)
-{
-	return S3E_RESULT_ERROR;
 }
 
 void s3eVungleStart_platform(const char* pubAppID)

@@ -104,16 +104,6 @@ void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)
     out_userData->locationEnabled = data.locationEnabled;
 }
 
-s3eResult s3eVungleRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn, void* userData)
-{
-    return s3eEdkCallbacksRegister(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MAX, callbackID, callbackFn, userData, false);
-}
-
-s3eResult s3eVungleUnRegister_platform(s3eVungleCallback callbackID, s3eCallback callbackFn)
-{
-    return s3eEdkCallbacksUnRegister(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_MAX, callbackID, callbackFn);
-}
-
 void s3eVungleStart_platform(const char* pubAppID)
 {
 	[VGVunglePub startWithPubAppID:[NSString stringWithUTF8String:pubAppID]];
