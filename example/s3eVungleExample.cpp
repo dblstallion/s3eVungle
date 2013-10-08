@@ -79,10 +79,20 @@ void buttonEvent(s3ePointerTouchEvent *event)
 
     if(event->m_Pressed)
     {
-        if(s3eVungleIsAdAvailable())
+        if(event->m_x < 400)
         {
-            s3eDebugOutputString("Ad available, playing");
-            s3eVunglePlayModalAd(true, true);
+            if(s3eVungleIsAdAvailable())
+            {
+                s3eVunglePlayModalAd(true, true);
+            }
+            else
+            {
+                s3eDebugOutputString("No ad available");
+            }
+        }
+        else
+        {
+            s3eVunglePlayIncentivizedAd(true, true, NULL);
         }
     }
 }

@@ -70,6 +70,7 @@
 
 // the Vungle Delegate singleton
 static S3EVunglePubDelegate *gDelegate = NULL;
+static NSString *gCountdownText = NULL;
 
 s3eResult s3eVungleInit_platform()
 {
@@ -92,6 +93,12 @@ void s3eVungleTerminate_platform()
         [gDelegate release];
         gDelegate = NULL;
     }
+
+    if(gCountdownText)
+    {
+        [gCountdownText release];
+        gCountdownText = NULL;
+    }
 }
 
 void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)
@@ -106,7 +113,9 @@ void s3eVungleDefaultUserData_platform(s3eVungleUserData* out_userData)
 
 void s3eVungleStart_platform(const char* pubAppID)
 {
-	[VGVunglePub startWithPubAppID:[NSString stringWithUTF8String:pubAppID]];
+    NSString *nsAppId = [[NSString alloc] initWithUTF8String:pubAppID];
+	[VGVunglePub startWithPubAppID:nsAppId];
+    [nsAppId release];
 }
 
 void s3eVungleStartWithUserData_platform(const char* pubAppID, const s3eVungleUserData* userData)
@@ -118,7 +127,9 @@ void s3eVungleStartWithUserData_platform(const char* pubAppID, const s3eVungleUs
     data.adOrientation = (VGAdOrientation)userData->adOrientation;
     data.locationEnabled = userData->locationEnabled;
 
-    [VGVunglePub startWithPubAppID:[NSString stringWithUTF8String:pubAppID] userData:data];
+    NSString *nsAppId = [[NSString alloc] initWithUTF8String:pubAppID];
+    [VGVunglePub startWithPubAppID:nsAppId userData:data];
+    [nsAppId release];
 }
 
 void s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData* out_statusData)
@@ -164,7 +175,12 @@ void s3eVunglePlayModalAd_platform(s3eBool animate, s3eBool showClose)
 void s3eVunglePlayIncentivizedAd_platform(s3eBool animate, s3eBool showClose, const char* userTag)
 {
     UIViewController* viewController = s3eEdkGetUIViewController();
-    [VGVunglePub playIncentivizedAd:viewController animated:animate showClose:showClose userTag:[NSString stringWithUTF8String:userTag]];
+    NSString *nsUserTag = userTag ? [[NSString alloc] initWithUTF8String:userTag] : NULL;
+
+    [VGVunglePub playIncentivizedAd:viewController animated:animate showClose:showClose userTag:nsUserTag];
+
+    if(nsUserTag)
+        [nsUserTag release];
 }
 
 int32 s3eVungleGetCacheSize_platform()
@@ -194,12 +210,28 @@ void s3eVungleSetMuteIfMusicIsPlaying_platform(s3eBool state)
 
 s3eBool s3eVungleSetCustomCountDownText_platform(const char* text)
 {
-    return [VGVunglePub setCustomCountDownText:[NSString stringWithUTF8String:text]];
+    if(gCountdownText)
+    {
+        [gCountdownText release];
+    }
+
+    gCountdownText = [[NSString alloc] initWithUTF8String:text];
+    s3eBool ret = [VGVunglePub setCustomCountDownText:gCountdownText];
+
+    return ret;
 }
 
 void s3eVungleSetAlertBoxSettings_platform(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle)
 {
-    [VGVunglePub alertBoxWithTitle:[NSString stringWithUTF8String:title] Body:[NSString stringWithUTF8String:body] leftButtonTitle:[NSString stringWithUTF8String:leftButtonTitle] rightButtonTitle:[NSString stringWithUTF8String:rightButtonTitle]];
+    NSString *nsTitle = [[NSString alloc] initWithUTF8String:title];
+    NSString *nsBody = [[NSString alloc] initWithUTF8String:body];
+    NSString *nsLeftButton = [[NSString alloc] initWithUTF8String:leftButtonTitle];
+    NSString *nsRightButton = [[NSString alloc] initWithUTF8String:rightButtonTitle];
+    [VGVunglePub alertBoxWithTitle:nsTitle Body:nsBody leftButtonTitle:nsLeftButton rightButtonTitle:nsRightButton];
+    [nsTitle release];
+    [nsBody release];
+    [nsLeftButton release];
+    [nsRightButton release];
 }
 
 void s3eVungleSetAllowAutoRotate_platform(s3eBool allow)
