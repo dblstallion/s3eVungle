@@ -70,7 +70,6 @@
 
 // the Vungle Delegate singleton
 static S3EVunglePubDelegate *gDelegate = NULL;
-static NSString *gCountdownText = NULL;
 
 s3eResult s3eVungleInit_platform()
 {
@@ -92,12 +91,6 @@ void s3eVungleTerminate_platform()
     {
         [gDelegate release];
         gDelegate = NULL;
-    }
-
-    if(gCountdownText)
-    {
-        [gCountdownText release];
-        gCountdownText = NULL;
     }
 }
 
@@ -210,13 +203,9 @@ void s3eVungleSetMuteIfMusicIsPlaying_platform(s3eBool state)
 
 s3eBool s3eVungleSetCustomCountDownText_platform(const char* text)
 {
-    if(gCountdownText)
-    {
-        [gCountdownText release];
-    }
-
-    gCountdownText = [[NSString alloc] initWithUTF8String:text];
-    s3eBool ret = [VGVunglePub setCustomCountDownText:gCountdownText];
+    NSString* nsText = [[NSString alloc] initWithUTF8String:text];
+    s3eBool ret = [VGVunglePub setCustomCountDownText:nsText];
+    [nsText release];
 
     return ret;
 }
