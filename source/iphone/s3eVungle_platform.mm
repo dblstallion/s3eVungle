@@ -66,6 +66,14 @@
         s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_AppStoreViewDidDisappear);
 	}
 }
+
+-(void)vungleAppStoreWillAppear
+{
+    if (s3eEdkCallbacksIsRegistered(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_AppStoreWillAppear))
+	{
+        s3eEdkCallbacksEnqueue(S3E_EXT_VUNGLE_HASH, s3eVungleCallback_AppStoreWillAppear);
+	}
+}
 @end
 
 // the Vungle Delegate singleton

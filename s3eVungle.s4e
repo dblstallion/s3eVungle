@@ -32,6 +32,11 @@ typedef enum s3eVungleCallback
 	 */
 	s3eVungleCallback_AppStoreViewDidDisappear,
 	/**
+	 * Called when the Vungle AppStoreWillAppear delegate is called
+	 * systemData will be NULL
+	 */
+	s3eVungleCallback_AppStoreWillAppear,
+	/**
 	 * Called when the Vungle API wants to log some test
 	 * systemData will be a const char* containing the logging text
 	 */

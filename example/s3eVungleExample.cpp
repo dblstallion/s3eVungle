@@ -36,6 +36,11 @@ void vungleAppStoreViewDidDisappear(void *statusData, void *userData)
     s3eDebugOutputString("Vungle app store view did disappear");
 }
 
+void vungleAppStoreWillAppear(void *statusData, void *userData)
+{
+    s3eDebugOutputString("Vungle app store view will appear");
+}
+
 void initVungle()
 {
     IW_CALLSTACK("initVungle");
@@ -57,6 +62,7 @@ void initVungle()
     s3eVungleRegister(s3eVungleCallback_ViewDidDisappear, (s3eCallback)vungleViewDidDisappear, NULL);
     s3eVungleRegister(s3eVungleCallback_ViewWillAppear, (s3eCallback)vungleViewWillAppear, NULL);
     s3eVungleRegister(s3eVungleCallback_AppStoreViewDidDisappear, (s3eCallback)vungleAppStoreViewDidDisappear, NULL);
+    s3eVungleRegister(s3eVungleCallback_AppStoreWillAppear, (s3eCallback)vungleAppStoreWillAppear, NULL);
 
     // Settings
     s3eVungleSetAlertBoxSettings("Stop?", "You won't get your reward, man", "Stop!", "I want it");
