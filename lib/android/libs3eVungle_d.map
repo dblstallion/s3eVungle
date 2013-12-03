@@ -171,7 +171,7 @@ Memory map
 .plt            0x000014a4      0x1a0
  ** PLT         0x000014a4      0x1a0
 
-.text           0x00001648     0x3c88
+.text           0x00001648     0x3cac
  .text.exit     0x00001648       0x10 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
                 0x00001648                __on_dlclose
  .text._ZN7_JNIEnv9FindClassEPKc
@@ -250,230 +250,230 @@ Memory map
                 0x000024d0       0x40 debug\s3eVungle_platform.os
                 0x000024d0                s3eVungleDefaultUserData_platform(s3eVungleUserData*)
  .text._Z23s3eVungleStart_platformPKc
-                0x00002510       0x60 debug\s3eVungle_platform.os
+                0x00002510       0x6c debug\s3eVungle_platform.os
                 0x00002510                s3eVungleStart_platform(char const*)
  .text._Z35s3eVungleStartWithUserData_platformPKcPK17s3eVungleUserData
-                0x00002570       0x64 debug\s3eVungle_platform.os
-                0x00002570                s3eVungleStartWithUserData_platform(char const*, s3eVungleUserData const*)
+                0x0000257c       0x70 debug\s3eVungle_platform.os
+                0x0000257c                s3eVungleStartWithUserData_platform(char const*, s3eVungleUserData const*)
  .text._Z38s3eVungleGetCurrentStatusData_platformP19s3eVungleStatusData
-                0x000025d4       0x24 debug\s3eVungle_platform.os
-                0x000025d4                s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData*)
+                0x000025ec       0x24 debug\s3eVungle_platform.os
+                0x000025ec                s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData*)
  .text._Z27s3eVungleIsRunning_platformv
-                0x000025f8        0xc debug\s3eVungle_platform.os
-                0x000025f8                s3eVungleIsRunning_platform()
+                0x00002610        0xc debug\s3eVungle_platform.os
+                0x00002610                s3eVungleIsRunning_platform()
  .text._Z33s3eVunglePrintCacheFiles_platformv
-                0x00002604        0x4 debug\s3eVungle_platform.os
-                0x00002604                s3eVunglePrintCacheFiles_platform()
+                0x0000261c        0x4 debug\s3eVungle_platform.os
+                0x0000261c                s3eVunglePrintCacheFiles_platform()
  .text._Z37s3eVunglePrintDeviceSettings_platformv
-                0x00002608        0x4 debug\s3eVungle_platform.os
-                0x00002608                s3eVunglePrintDeviceSettings_platform()
+                0x00002620        0x4 debug\s3eVungle_platform.os
+                0x00002620                s3eVunglePrintDeviceSettings_platform()
  .text._Z34s3eVungleGetVersionString_platformv
-                0x0000260c       0x5c debug\s3eVungle_platform.os
-                0x0000260c                s3eVungleGetVersionString_platform()
+                0x00002624       0x5c debug\s3eVungle_platform.os
+                0x00002624                s3eVungleGetVersionString_platform()
  .text._Z31s3eVungleIsAdAvailable_platformv
-                0x00002668       0x50 debug\s3eVungle_platform.os
-                0x00002668                s3eVungleIsAdAvailable_platform()
+                0x00002680       0x50 debug\s3eVungle_platform.os
+                0x00002680                s3eVungleIsAdAvailable_platform()
  .text._Z29s3eVunglePlayModalAd_platformhh
-                0x000026b8       0x5c debug\s3eVungle_platform.os
-                0x000026b8                s3eVunglePlayModalAd_platform(unsigned char, unsigned char)
+                0x000026d0       0x5c debug\s3eVungle_platform.os
+                0x000026d0                s3eVunglePlayModalAd_platform(unsigned char, unsigned char)
  .text._Z36s3eVunglePlayIncentivizedAd_platformhhPKc
-                0x00002714       0x78 debug\s3eVungle_platform.os
-                0x00002714                s3eVunglePlayIncentivizedAd_platform(unsigned char, unsigned char, char const*)
+                0x0000272c       0x84 debug\s3eVungle_platform.os
+                0x0000272c                s3eVunglePlayIncentivizedAd_platform(unsigned char, unsigned char, char const*)
  .text._Z30s3eVungleGetCacheSize_platformv
-                0x0000278c        0xc debug\s3eVungle_platform.os
-                0x0000278c                s3eVungleGetCacheSize_platform()
+                0x000027b0        0xc debug\s3eVungle_platform.os
+                0x000027b0                s3eVungleGetCacheSize_platform()
  .text._Z30s3eVungleSetCacheSize_platformi
-                0x00002798       0x10 debug\s3eVungle_platform.os
-                0x00002798                s3eVungleSetCacheSize_platform(int)
+                0x000027bc       0x10 debug\s3eVungle_platform.os
+                0x000027bc                s3eVungleSetCacheSize_platform(int)
  .text._Z32s3eVungleSetLogToStdout_platformh
-                0x000027a8       0x14 debug\s3eVungle_platform.os
-                0x000027a8                s3eVungleSetLogToStdout_platform(unsigned char)
+                0x000027cc       0x14 debug\s3eVungle_platform.os
+                0x000027cc                s3eVungleSetLogToStdout_platform(unsigned char)
  .text._Z33s3eVungleSetSoundEnabled_platformh
-                0x000027bc       0x4c debug\s3eVungle_platform.os
-                0x000027bc                s3eVungleSetSoundEnabled_platform(unsigned char)
+                0x000027e0       0x4c debug\s3eVungle_platform.os
+                0x000027e0                s3eVungleSetSoundEnabled_platform(unsigned char)
  .text._Z41s3eVungleSetMuteIfMusicIsPlaying_platformh
-                0x00002808       0x14 debug\s3eVungle_platform.os
-                0x00002808                s3eVungleSetMuteIfMusicIsPlaying_platform(unsigned char)
+                0x0000282c       0x14 debug\s3eVungle_platform.os
+                0x0000282c                s3eVungleSetMuteIfMusicIsPlaying_platform(unsigned char)
  .text._Z40s3eVungleSetCustomCountDownText_platformPKc
-                0x0000281c       0x18 debug\s3eVungle_platform.os
-                0x0000281c                s3eVungleSetCustomCountDownText_platform(char const*)
+                0x00002840       0x18 debug\s3eVungle_platform.os
+                0x00002840                s3eVungleSetCustomCountDownText_platform(char const*)
  .text._Z37s3eVungleSetAlertBoxSettings_platformPKcS0_S0_S0_
-                0x00002834       0x1c debug\s3eVungle_platform.os
-                0x00002834                s3eVungleSetAlertBoxSettings_platform(char const*, char const*, char const*, char const*)
+                0x00002858       0x1c debug\s3eVungle_platform.os
+                0x00002858                s3eVungleSetAlertBoxSettings_platform(char const*, char const*, char const*, char const*)
  .text._Z36s3eVungleSetAllowAutoRotate_platformh
-                0x00002850       0x4c debug\s3eVungle_platform.os
-                0x00002850                s3eVungleSetAllowAutoRotate_platform(unsigned char)
+                0x00002874       0x4c debug\s3eVungle_platform.os
+                0x00002874                s3eVungleSetAllowAutoRotate_platform(unsigned char)
  .text._Z13s3eVungleInitv
-                0x0000289c       0x14 debug\s3eVungle.os
-                0x0000289c                s3eVungleInit()
+                0x000028c0       0x14 debug\s3eVungle.os
+                0x000028c0                s3eVungleInit()
  .text._Z18s3eVungleTerminatev
-                0x000028b0        0xc debug\s3eVungle.os
-                0x000028b0                s3eVungleTerminate()
+                0x000028d4        0xc debug\s3eVungle.os
+                0x000028d4                s3eVungleTerminate()
  .text.s3eVungleDefaultUserData
-                0x000028bc       0x1c debug\s3eVungle.os
-                0x000028bc                s3eVungleDefaultUserData
+                0x000028e0       0x1c debug\s3eVungle.os
+                0x000028e0                s3eVungleDefaultUserData
  .text.s3eVungleRegister
-                0x000028d8       0x50 debug\s3eVungle.os
-                0x000028d8                s3eVungleRegister
+                0x000028fc       0x50 debug\s3eVungle.os
+                0x000028fc                s3eVungleRegister
  .text.s3eVungleUnRegister
-                0x00002928       0x44 debug\s3eVungle.os
-                0x00002928                s3eVungleUnRegister
+                0x0000294c       0x44 debug\s3eVungle.os
+                0x0000294c                s3eVungleUnRegister
  .text.s3eVungleStart
-                0x0000296c       0x1c debug\s3eVungle.os
-                0x0000296c                s3eVungleStart
+                0x00002990       0x1c debug\s3eVungle.os
+                0x00002990                s3eVungleStart
  .text.s3eVungleStartWithUserData
-                0x00002988       0x24 debug\s3eVungle.os
-                0x00002988                s3eVungleStartWithUserData
+                0x000029ac       0x24 debug\s3eVungle.os
+                0x000029ac                s3eVungleStartWithUserData
  .text.s3eVungleGetCurrentStatusData
-                0x000029ac       0x1c debug\s3eVungle.os
-                0x000029ac                s3eVungleGetCurrentStatusData
+                0x000029d0       0x1c debug\s3eVungle.os
+                0x000029d0                s3eVungleGetCurrentStatusData
  .text.s3eVungleIsRunning
-                0x000029c8       0x14 debug\s3eVungle.os
-                0x000029c8                s3eVungleIsRunning
+                0x000029ec       0x14 debug\s3eVungle.os
+                0x000029ec                s3eVungleIsRunning
  .text.s3eVunglePrintCacheFiles
-                0x000029dc        0xc debug\s3eVungle.os
-                0x000029dc                s3eVunglePrintCacheFiles
+                0x00002a00        0xc debug\s3eVungle.os
+                0x00002a00                s3eVunglePrintCacheFiles
  .text.s3eVunglePrintDeviceSettings
-                0x000029e8        0xc debug\s3eVungle.os
-                0x000029e8                s3eVunglePrintDeviceSettings
+                0x00002a0c        0xc debug\s3eVungle.os
+                0x00002a0c                s3eVunglePrintDeviceSettings
  .text.s3eVungleGetVersionString
-                0x000029f4       0x14 debug\s3eVungle.os
-                0x000029f4                s3eVungleGetVersionString
+                0x00002a18       0x14 debug\s3eVungle.os
+                0x00002a18                s3eVungleGetVersionString
  .text.s3eVungleIsAdAvailable
-                0x00002a08       0x14 debug\s3eVungle.os
-                0x00002a08                s3eVungleIsAdAvailable
+                0x00002a2c       0x14 debug\s3eVungle.os
+                0x00002a2c                s3eVungleIsAdAvailable
  .text.s3eVunglePlayModalAd
-                0x00002a1c       0x34 debug\s3eVungle.os
-                0x00002a1c                s3eVunglePlayModalAd
+                0x00002a40       0x34 debug\s3eVungle.os
+                0x00002a40                s3eVunglePlayModalAd
  .text.s3eVunglePlayIncentivizedAd
-                0x00002a50       0x3c debug\s3eVungle.os
-                0x00002a50                s3eVunglePlayIncentivizedAd
+                0x00002a74       0x3c debug\s3eVungle.os
+                0x00002a74                s3eVunglePlayIncentivizedAd
  .text.s3eVungleGetCacheSize
-                0x00002a8c       0x14 debug\s3eVungle.os
-                0x00002a8c                s3eVungleGetCacheSize
+                0x00002ab0       0x14 debug\s3eVungle.os
+                0x00002ab0                s3eVungleGetCacheSize
  .text.s3eVungleSetCacheSize
-                0x00002aa0       0x1c debug\s3eVungle.os
-                0x00002aa0                s3eVungleSetCacheSize
+                0x00002ac4       0x1c debug\s3eVungle.os
+                0x00002ac4                s3eVungleSetCacheSize
  .text.s3eVungleSetLogToStdout
-                0x00002abc       0x24 debug\s3eVungle.os
-                0x00002abc                s3eVungleSetLogToStdout
- .text.s3eVungleSetSoundEnabled
                 0x00002ae0       0x24 debug\s3eVungle.os
-                0x00002ae0                s3eVungleSetSoundEnabled
- .text.s3eVungleSetMuteIfMusicIsPlaying
+                0x00002ae0                s3eVungleSetLogToStdout
+ .text.s3eVungleSetSoundEnabled
                 0x00002b04       0x24 debug\s3eVungle.os
-                0x00002b04                s3eVungleSetMuteIfMusicIsPlaying
- .text.s3eVungleSetCustomCountDownText
+                0x00002b04                s3eVungleSetSoundEnabled
+ .text.s3eVungleSetMuteIfMusicIsPlaying
                 0x00002b28       0x24 debug\s3eVungle.os
-                0x00002b28                s3eVungleSetCustomCountDownText
+                0x00002b28                s3eVungleSetMuteIfMusicIsPlaying
+ .text.s3eVungleSetCustomCountDownText
+                0x00002b4c       0x24 debug\s3eVungle.os
+                0x00002b4c                s3eVungleSetCustomCountDownText
  .text.s3eVungleSetAlertBoxSettings
-                0x00002b4c       0x34 debug\s3eVungle.os
-                0x00002b4c                s3eVungleSetAlertBoxSettings
+                0x00002b70       0x34 debug\s3eVungle.os
+                0x00002b70                s3eVungleSetAlertBoxSettings
  .text.s3eVungleSetAllowAutoRotate
-                0x00002b80       0x24 debug\s3eVungle.os
-                0x00002b80                s3eVungleSetAllowAutoRotate
+                0x00002ba4       0x24 debug\s3eVungle.os
+                0x00002ba4                s3eVungleSetAllowAutoRotate
  .text._ZL25s3eVunglePlayModalAd_wraphh
-                0x00002ba4       0xa8 debug\s3eVungle_register.os
+                0x00002bc8       0xa8 debug\s3eVungle_register.os
  .text._ZL32s3eVunglePlayIncentivizedAd_wraphhPKc
-                0x00002c4c       0xb4 debug\s3eVungle_register.os
+                0x00002c70       0xb4 debug\s3eVungle_register.os
  .text._Z20s3eVungleRegisterExtv
-                0x00002d00      0x1d0 debug\s3eVungle_register.os
-                0x00002d00                s3eVungleRegisterExt()
+                0x00002d24      0x1d0 debug\s3eVungle_register.os
+                0x00002d24                s3eVungleRegisterExt()
  .text.RegisterExt
-                0x00002ed0        0xc debug\s3eVungle_register.os
-                0x00002ed0                RegisterExt
+                0x00002ef4        0xc debug\s3eVungle_register.os
+                0x00002ef4                RegisterExt
  .text.IwDebugTraceSetTraceChannel
-                0x00002edc       0x1c C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x00002edc                IwDebugTraceSetTraceChannel
+                0x00002f00       0x1c C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00002f00                IwDebugTraceSetTraceChannel
  .text._GLOBAL__I_Z__sdk_modules_iwcore_source_IwDebug.cpp
-                0x00002ef8       0xa4 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00002f1c       0xa4 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
  .text.IwDebugTraceIsChannelOn
-                0x00002f9c      0x2b8 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x00002f9c                IwDebugTraceIsChannelOn
+                0x00002fc0      0x2b8 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00002fc0                IwDebugTraceIsChannelOn
  .text.IwDebugTraceLinePrintf
-                0x00003254      0x10c C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
-                0x00003254                IwDebugTraceLinePrintf
+                0x00003278      0x10c C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00003278                IwDebugTraceLinePrintf
  .text.s3eEdkThreadRunOnOS
-                0x00003360       0x30 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
-                0x00003360                s3eEdkThreadRunOnOS
- .text          0x00003390       0x44 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_aeabi_ldivmod.o)
-                0x00003390                __aeabi_ldivmod
- .text          0x000033d4       0x10 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_dvmd_lnx.o)
-                0x000033d4                __aeabi_idiv0
-                0x000033d4                __aeabi_ldiv0
- .text          0x000033e4       0x78 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(bpabi.o)
-                0x000033e4                __gnu_ldivmod_helper
-                0x00003420                __gnu_uldivmod_helper
- .text          0x0000345c      0x480 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_divdi3.o)
-                0x0000345c                __divdi3
- .text          0x000038dc      0x400 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_udivdi3.o)
-                0x000038dc                __udivdi3
- .text          0x00003cdc      0xef4 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(unwind-arm.o)
-                0x000047a8                __aeabi_unwind_cpp_pr0
-                0x000047a0                __aeabi_unwind_cpp_pr1
-                0x00004798                __aeabi_unwind_cpp_pr2
-                0x00004118                _Unwind_GetCFA
-                0x00004120                __gnu_Unwind_RaiseException
-                0x000041c4                __gnu_Unwind_ForcedUnwind
-                0x000041e0                __gnu_Unwind_Resume
-                0x00004258                __gnu_Unwind_Resume_or_Rethrow
-                0x00004278                _Unwind_Complete
-                0x0000427c                _Unwind_DeleteException
-                0x0000429c                _Unwind_VRS_Get
-                0x00004308                _Unwind_VRS_Set
-                0x000047b0                __gnu_Unwind_Backtrace
-                0x00004870                _Unwind_VRS_Pop
- .text          0x00004bd0      0x1a8 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(libunwind.o)
-                0x00004bd0                __restore_core_regs
-                0x00004bd0                restore_core_regs
-                0x00004be4                __gnu_Unwind_Restore_VFP
-                0x00004bec                __gnu_Unwind_Save_VFP
-                0x00004bf4                __gnu_Unwind_Restore_VFP_D
-                0x00004bfc                __gnu_Unwind_Save_VFP_D
-                0x00004c04                __gnu_Unwind_Restore_VFP_D_16_to_31
-                0x00004c0c                __gnu_Unwind_Save_VFP_D_16_to_31
-                0x00004c14                __gnu_Unwind_Restore_WMMXD
-                0x00004c58                __gnu_Unwind_Save_WMMXD
-                0x00004c9c                __gnu_Unwind_Restore_WMMXC
-                0x00004cb0                __gnu_Unwind_Save_WMMXC
-                0x00004cc4                ___Unwind_RaiseException
-                0x00004cc4                _Unwind_RaiseException
-                0x00004ce8                ___Unwind_Resume
-                0x00004ce8                _Unwind_Resume
-                0x00004d0c                ___Unwind_Resume_or_Rethrow
-                0x00004d0c                _Unwind_Resume_or_Rethrow
-                0x00004d30                ___Unwind_ForcedUnwind
-                0x00004d30                _Unwind_ForcedUnwind
-                0x00004d54                ___Unwind_Backtrace
-                0x00004d54                _Unwind_Backtrace
- .text          0x00004d78      0x490 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(pr-support.o)
-                0x00004e00                __gnu_unwind_execute
-                0x0000518c                __gnu_unwind_frame
-                0x000051cc                _Unwind_GetRegionStart
-                0x000051dc                _Unwind_GetLanguageSpecificData
-                0x000051f8                _Unwind_GetDataRelBase
-                0x00005200                _Unwind_GetTextRelBase
+                0x00003384       0x30 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00003384                s3eEdkThreadRunOnOS
+ .text          0x000033b4       0x44 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_aeabi_ldivmod.o)
+                0x000033b4                __aeabi_ldivmod
+ .text          0x000033f8       0x10 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_dvmd_lnx.o)
+                0x000033f8                __aeabi_idiv0
+                0x000033f8                __aeabi_ldiv0
+ .text          0x00003408       0x78 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(bpabi.o)
+                0x00003408                __gnu_ldivmod_helper
+                0x00003444                __gnu_uldivmod_helper
+ .text          0x00003480      0x480 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_divdi3.o)
+                0x00003480                __divdi3
+ .text          0x00003900      0x400 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_udivdi3.o)
+                0x00003900                __udivdi3
+ .text          0x00003d00      0xef4 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(unwind-arm.o)
+                0x000047cc                __aeabi_unwind_cpp_pr0
+                0x000047c4                __aeabi_unwind_cpp_pr1
+                0x000047bc                __aeabi_unwind_cpp_pr2
+                0x0000413c                _Unwind_GetCFA
+                0x00004144                __gnu_Unwind_RaiseException
+                0x000041e8                __gnu_Unwind_ForcedUnwind
+                0x00004204                __gnu_Unwind_Resume
+                0x0000427c                __gnu_Unwind_Resume_or_Rethrow
+                0x0000429c                _Unwind_Complete
+                0x000042a0                _Unwind_DeleteException
+                0x000042c0                _Unwind_VRS_Get
+                0x0000432c                _Unwind_VRS_Set
+                0x000047d4                __gnu_Unwind_Backtrace
+                0x00004894                _Unwind_VRS_Pop
+ .text          0x00004bf4      0x1a8 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(libunwind.o)
+                0x00004bf4                __restore_core_regs
+                0x00004bf4                restore_core_regs
+                0x00004c08                __gnu_Unwind_Restore_VFP
+                0x00004c10                __gnu_Unwind_Save_VFP
+                0x00004c18                __gnu_Unwind_Restore_VFP_D
+                0x00004c20                __gnu_Unwind_Save_VFP_D
+                0x00004c28                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x00004c30                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x00004c38                __gnu_Unwind_Restore_WMMXD
+                0x00004c7c                __gnu_Unwind_Save_WMMXD
+                0x00004cc0                __gnu_Unwind_Restore_WMMXC
+                0x00004cd4                __gnu_Unwind_Save_WMMXC
+                0x00004ce8                ___Unwind_RaiseException
+                0x00004ce8                _Unwind_RaiseException
+                0x00004d0c                ___Unwind_Resume
+                0x00004d0c                _Unwind_Resume
+                0x00004d30                ___Unwind_Resume_or_Rethrow
+                0x00004d30                _Unwind_Resume_or_Rethrow
+                0x00004d54                ___Unwind_ForcedUnwind
+                0x00004d54                _Unwind_ForcedUnwind
+                0x00004d78                ___Unwind_Backtrace
+                0x00004d78                _Unwind_Backtrace
+ .text          0x00004d9c      0x490 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(pr-support.o)
+                0x00004e24                __gnu_unwind_execute
+                0x000051b0                __gnu_unwind_frame
+                0x000051f0                _Unwind_GetRegionStart
+                0x00005200                _Unwind_GetLanguageSpecificData
+                0x0000521c                _Unwind_GetDataRelBase
+                0x00005224                _Unwind_GetTextRelBase
  .text          0xffffffffffffffff       0xc8 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_udivsi3.o)
-                0x00005208                __udivsi3
-                0x00005208                __aeabi_uidiv
-                0x000052b0                __aeabi_uidivmod
+                0x0000522c                __udivsi3
+                0x0000522c                __aeabi_uidiv
+                0x000052d4                __aeabi_uidivmod
 
-.rodata         0x000052d0      0x370
- .rodata        0x000052d0      0x1b4 debug\s3eVungle_platform.os
- .rodata        0x00005484       0x9c debug\s3eVungle_register.os
+.rodata         0x000052f4      0x370
+ .rodata        0x000052f4      0x1b4 debug\s3eVungle_platform.os
+ .rodata        0x000054a8       0x9c debug\s3eVungle_register.os
  .rodata.str1.4
-                0x00005520      0x120 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
+                0x00005544      0x120 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(IwDebug.o)
 
-.ARM.exidx      0x00005640       0xe8
- .ARM.exidx     0x00005640        0x8 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_divdi3.o)
+.ARM.exidx      0x00005664       0xe8
+ .ARM.exidx     0x00005664        0x8 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(_divdi3.o)
  .ARM.exidx     0xffffffffffffffff       0xd8 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(unwind-arm.o)
  ** ARM cantunwind
-                0x000056e8        0x8
+                0x0000570c        0x8
  .ARM.exidx     0xffffffffffffffff       0x48 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(pr-support.o)
 
-.ARM.extab      0x00005728       0x3c
- .ARM.extab     0x00005728       0x24 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(unwind-arm.o)
- .ARM.extab     0x0000574c       0x18 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(pr-support.o)
+.ARM.extab      0x0000574c       0x3c
+ .ARM.extab     0x0000574c       0x24 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(unwind-arm.o)
+ .ARM.extab     0x00005770       0x18 c:/program files/adt-bundle-windows-x86_64-20130717/android-ndk-r8d/toolchains/arm-linux-androideabi-4.7/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.7/libgcc.a(pr-support.o)
 
 .fini_array     0x00006e08        0x8
  .fini_array    0x00006e08        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o

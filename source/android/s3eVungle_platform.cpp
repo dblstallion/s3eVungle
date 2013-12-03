@@ -211,6 +211,7 @@ void s3eVungleStart_platform(const char* pubAppID)
     JNIEnv* env = s3eEdkJNIGetEnv();
     jstring pubAppID_jstr = env->NewStringUTF(pubAppID);
     env->CallVoidMethod(g_Obj, g_s3eVungleStart, pubAppID_jstr);
+    env->DeleteLocalRef(pubAppID_jstr);
 }
 
 void s3eVungleStartWithUserData_platform(const char* pubAppID, const s3eVungleUserData* userData)
@@ -218,6 +219,7 @@ void s3eVungleStartWithUserData_platform(const char* pubAppID, const s3eVungleUs
     JNIEnv* env = s3eEdkJNIGetEnv();
     jstring pubAppID_jstr = env->NewStringUTF(pubAppID);
     env->CallVoidMethod(g_Obj, g_s3eVungleStart, pubAppID_jstr);
+    env->DeleteLocalRef(pubAppID_jstr);
 }
 
 void s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData* out_statusData)
@@ -261,6 +263,7 @@ void s3eVunglePlayIncentivizedAd_platform(s3eBool animate, s3eBool showClose, co
     JNIEnv* env = s3eEdkJNIGetEnv();
     jstring userTag_jstr = env->NewStringUTF(userTag);
     env->CallVoidMethod(g_Obj, g_s3eVunglePlayIncentivizedAd, animate, showClose, userTag_jstr);
+    env->DeleteLocalRef(userTag_jstr);
 }
 
 int32 s3eVungleGetCacheSize_platform()
