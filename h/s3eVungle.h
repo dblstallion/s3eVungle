@@ -177,6 +177,8 @@ void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const cha
 
 void s3eVungleSetAllowAutoRotate(s3eBool allow);
 
+void s3eVungleSetBackButtonEnabled(s3eBool isBackButtonEnabled);
+
 S3E_END_C_DECL
 
 #endif /* !S3E_EXT_VUNGLE_H */

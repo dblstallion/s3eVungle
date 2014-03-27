@@ -58,6 +58,11 @@ class s3eVungle
     {
         VunglePub.setAutoRotation(allow);
     }
+    public void s3eVungleSetBackButtonEnabled(boolean isBackButtonEnabled)
+    {
+        VunglePub.setBackButtonEnabled(isBackButtonEnabled);
+        VunglePub.setIncentivizedBackButtonEnabled(isBackButtonEnabled);
+    }
 	
 	private final class VunglePubListener implements VunglePub.EventListener
 	{

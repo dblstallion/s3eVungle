@@ -11,10 +11,12 @@
 #include "s3eVungle.h"
 
 
-// For MIPs (and WP8) platform we do not have asm code for stack switching 
+#ifndef S3E_EXT_SKIP_LOADER_CALL_LOCK
+// For MIPs (and WP8) platform we do not have asm code for stack switching
 // implemented. So we make LoaderCallStart call manually to set GlobalLock
 #if defined __mips || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP))
-#define LOADER_CALL
+#define LOADER_CALL_LOCK
+#endif
 #endif
 
 /**
@@ -41,6 +43,7 @@ typedef       void(*s3eVungleSetMuteIfMusicIsPlaying_t)(s3eBool state);
 typedef    s3eBool(*s3eVungleSetCustomCountDownText_t)(const char* text);
 typedef       void(*s3eVungleSetAlertBoxSettings_t)(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle);
 typedef       void(*s3eVungleSetAllowAutoRotate_t)(s3eBool allow);
+typedef       void(*s3eVungleSetBackButtonEnabled_t)(s3eBool isBackButtonEnabled);
 
 /**
  * struct that gets filled in by s3eVungleRegister
@@ -68,6 +71,7 @@ typedef struct s3eVungleFuncs
     s3eVungleSetCustomCountDownText_t m_s3eVungleSetCustomCountDownText;
     s3eVungleSetAlertBoxSettings_t m_s3eVungleSetAlertBoxSettings;
     s3eVungleSetAllowAutoRotate_t m_s3eVungleSetAllowAutoRotate;
+    s3eVungleSetBackButtonEnabled_t m_s3eVungleSetBackButtonEnabled;
 } s3eVungleFuncs;
 
 static s3eVungleFuncs g_Ext;
@@ -84,7 +88,7 @@ static bool _extLoad()
             g_GotExt = true;
         else
             s3eDebugAssertShow(S3E_MESSAGE_CONTINUE_STOP_IGNORE,                 "error loading extension: s3eVungle");
-            
+
         g_TriedExt = true;
         g_TriedNoMsgExt = true;
     }
@@ -120,13 +124,13 @@ void s3eVungleDefaultUserData(s3eVungleUserData* out_userData)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleDefaultUserData(out_userData);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -140,13 +144,13 @@ s3eResult s3eVungleRegister(s3eVungleCallback callbackID, s3eCallback callbackFn
     if (!_extLoad())
         return S3E_RESULT_ERROR;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     s3eResult ret = g_Ext.m_s3eVungleRegister(callbackID, callbackFn, userData);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -160,13 +164,13 @@ s3eResult s3eVungleUnRegister(s3eVungleCallback callbackID, s3eCallback callback
     if (!_extLoad())
         return S3E_RESULT_ERROR;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     s3eResult ret = g_Ext.m_s3eVungleUnRegister(callbackID, callbackFn);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -180,13 +184,13 @@ void s3eVungleStart(const char* pubAppID)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleStart(pubAppID);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -200,13 +204,13 @@ void s3eVungleStartWithUserData(const char* pubAppID, const s3eVungleUserData* u
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleStartWithUserData(pubAppID, userData);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -220,13 +224,13 @@ void s3eVungleGetCurrentStatusData(s3eVungleStatusData* out_statusData)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleGetCurrentStatusData(out_statusData);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -240,13 +244,13 @@ s3eBool s3eVungleIsRunning()
     if (!_extLoad())
         return S3E_FALSE;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     s3eBool ret = g_Ext.m_s3eVungleIsRunning();
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -260,13 +264,13 @@ void s3eVunglePrintCacheFiles()
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVunglePrintCacheFiles();
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -280,13 +284,13 @@ void s3eVunglePrintDeviceSettings()
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVunglePrintDeviceSettings();
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -300,13 +304,13 @@ const char* s3eVungleGetVersionString()
     if (!_extLoad())
         return NULL;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     const char* ret = g_Ext.m_s3eVungleGetVersionString();
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -320,13 +324,13 @@ s3eBool s3eVungleIsAdAvailable()
     if (!_extLoad())
         return S3E_FALSE;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     s3eBool ret = g_Ext.m_s3eVungleIsAdAvailable();
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -340,13 +344,13 @@ void s3eVunglePlayModalAd(s3eBool animate, s3eBool showClose)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVunglePlayModalAd(animate, showClose);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -360,13 +364,13 @@ void s3eVunglePlayIncentivizedAd(s3eBool animate, s3eBool showClose, const char*
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVunglePlayIncentivizedAd(animate, showClose, userTag);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -380,13 +384,13 @@ int32 s3eVungleGetCacheSize()
     if (!_extLoad())
         return 0;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     int32 ret = g_Ext.m_s3eVungleGetCacheSize();
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -400,13 +404,13 @@ void s3eVungleSetCacheSize(int32 megabytes)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleSetCacheSize(megabytes);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -420,13 +424,13 @@ void s3eVungleSetLogToStdout(s3eBool state)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleSetLogToStdout(state);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -440,13 +444,13 @@ void s3eVungleSetSoundEnabled(s3eBool enabled)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleSetSoundEnabled(enabled);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -460,13 +464,13 @@ void s3eVungleSetMuteIfMusicIsPlaying(s3eBool state)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleSetMuteIfMusicIsPlaying(state);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -480,13 +484,13 @@ s3eBool s3eVungleSetCustomCountDownText(const char* text)
     if (!_extLoad())
         return S3E_FALSE;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     s3eBool ret = g_Ext.m_s3eVungleSetCustomCountDownText(text);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -500,13 +504,13 @@ void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const cha
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleSetAlertBoxSettings(title, body, leftButtonTitle, rightButtonTitle);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -520,13 +524,33 @@ void s3eVungleSetAllowAutoRotate(s3eBool allow)
     if (!_extLoad())
         return;
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eVungleSetAllowAutoRotate(allow);
 
-#ifdef LOADER_CALL
+#ifdef LOADER_CALL_LOCK
+    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+#endif
+
+    return;
+}
+
+void s3eVungleSetBackButtonEnabled(s3eBool isBackButtonEnabled)
+{
+    IwTrace(VUNGLE_VERBOSE, ("calling s3eVungle[21] func: s3eVungleSetBackButtonEnabled"));
+
+    if (!_extLoad())
+        return;
+
+#ifdef LOADER_CALL_LOCK
+    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+#endif
+
+    g_Ext.m_s3eVungleSetBackButtonEnabled(isBackButtonEnabled);
+
+#ifdef LOADER_CALL_LOCK
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 

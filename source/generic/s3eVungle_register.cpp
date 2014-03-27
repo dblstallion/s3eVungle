@@ -44,7 +44,7 @@ static void s3eVunglePlayIncentivizedAd_wrap(s3eBool animate, s3eBool showClose,
 void s3eVungleRegisterExt()
 {
     /* fill in the function pointer struct for this extension */
-    void* funcPtrs[21];
+    void* funcPtrs[22];
     funcPtrs[0] = (void*)s3eVungleDefaultUserData;
     funcPtrs[1] = (void*)s3eVungleRegister;
     funcPtrs[2] = (void*)s3eVungleUnRegister;
@@ -66,11 +66,12 @@ void s3eVungleRegisterExt()
     funcPtrs[18] = (void*)s3eVungleSetCustomCountDownText;
     funcPtrs[19] = (void*)s3eVungleSetAlertBoxSettings;
     funcPtrs[20] = (void*)s3eVungleSetAllowAutoRotate;
+    funcPtrs[21] = (void*)s3eVungleSetBackButtonEnabled;
 
     /*
      * Flags that specify the extension's use of locking and stackswitching
      */
-    int flags[21] = { 0 };
+    int flags[22] = { 0 };
 
     /*
      * Register the extension

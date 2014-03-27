@@ -54,7 +54,7 @@ void initVungle()
 
     s3eVungleUserData data;
     s3eVungleDefaultUserData(&data);
-    data.adOrientation = s3eVungleAdOrientationPortrait;
+    data.adOrientation = s3eVungleAdOrientationLandscape;
     data.locationEnabled = true;
 
     s3eVungleRegister(s3eVungleCallback_MoviePlayed, (s3eCallback)vungleMoviePlayed, NULL);
@@ -66,7 +66,7 @@ void initVungle()
 
     // Settings
     s3eVungleSetAlertBoxSettings("Stop?", "You won't get your reward, man", "Stop!", "I want it");
-    s3eVungleSetAllowAutoRotate(true);
+    s3eVungleSetAllowAutoRotate(false);
     s3eVungleSetCacheSize(10);
     s3eVungleSetCustomCountDownText("Your reward");
     s3eVungleSetLogToStdout(true);
@@ -89,6 +89,7 @@ void buttonEvent(s3ePointerTouchEvent *event)
         {
             if(s3eVungleIsAdAvailable())
             {
+				s3eDebugOutputString("s3eVunglePlayModalAd");
                 s3eVunglePlayModalAd(true, true);
             }
             else
@@ -98,6 +99,7 @@ void buttonEvent(s3ePointerTouchEvent *event)
         }
         else
         {
+			s3eDebugOutputString("s3eVunglePlayIncentivizedAd");
             s3eVunglePlayIncentivizedAd(true, true, NULL);
         }
     }

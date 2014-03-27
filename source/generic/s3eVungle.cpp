@@ -130,3 +130,8 @@ void s3eVungleSetAllowAutoRotate(s3eBool allow)
 {
 	s3eVungleSetAllowAutoRotate_platform(allow);
 }
+
+void s3eVungleSetBackButtonEnabled(s3eBool isBackButtonEnabled)
+{
+	s3eVungleSetBackButtonEnabled_platform(isBackButtonEnabled);
+}

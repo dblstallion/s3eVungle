@@ -15,6 +15,9 @@ includepath h
 
 files
 {
+	(docs)
+	s3eVungle.config.txt
+	
     (h)
     s3eVungle.h
 

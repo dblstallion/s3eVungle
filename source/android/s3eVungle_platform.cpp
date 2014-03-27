@@ -40,6 +40,7 @@ static jmethodID g_s3eVunglePlayModalAd;
 static jmethodID g_s3eVunglePlayIncentivizedAd;
 static jmethodID g_s3eVungleSetSoundEnabled;
 static jmethodID g_s3eVungleSetAllowAutoRotate;
+static jmethodID g_s3eVungleSetBackButtonEnabled;
 
 static jmethodID g_onPause;
 static jmethodID g_onResume;
@@ -121,6 +122,10 @@ s3eResult s3eVungleInit_platform()
 
     g_s3eVungleSetAllowAutoRotate = env->GetMethodID(cls, "s3eVungleSetAllowAutoRotate", "(Z)V");
     if (!g_s3eVungleSetAllowAutoRotate)
+        goto fail;
+		
+    g_s3eVungleSetBackButtonEnabled = env->GetMethodID(cls, "s3eVungleSetBackButtonEnabled", "(Z)V");
+    if (!g_s3eVungleSetBackButtonEnabled)
         goto fail;
 
 	g_onPause = env->GetMethodID(cls, "onPause", "()V");
@@ -302,4 +307,10 @@ void s3eVungleSetAllowAutoRotate_platform(s3eBool allow)
 {
     JNIEnv* env = s3eEdkJNIGetEnv();
     env->CallVoidMethod(g_Obj, g_s3eVungleSetAllowAutoRotate, allow);
+}
+
+void s3eVungleSetBackButtonEnabled_platform(s3eBool isBackButtonEnabled)
+{
+    JNIEnv* env = s3eEdkJNIGetEnv();
+    env->CallVoidMethod(g_Obj, g_s3eVungleSetBackButtonEnabled, isBackButtonEnabled);
 }

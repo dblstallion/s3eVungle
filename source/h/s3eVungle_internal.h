@@ -80,5 +80,6 @@ void s3eVungleSetAlertBoxSettings_platform(const char* title, const char* body, 
 
 void s3eVungleSetAllowAutoRotate_platform(s3eBool allow);
 
+void s3eVungleSetBackButtonEnabled_platform(s3eBool isBackButtonEnabled);
 
 #endif /* !S3EVUNGLE_INTERNAL_H */

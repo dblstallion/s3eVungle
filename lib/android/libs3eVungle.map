@@ -1,277 +1,586 @@
 Archive member included because of file (symbol)
 
-C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                               release\s3eVungle_platform.os (s3eEdkThreadRunOnOS)
 
 Discarded input sections
 
- .text          0x00000000       0x14 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .bss           0x00000000        0x0 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ .text          0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ .bss           0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  .note.GNU-stack
-                0x00000000        0x0 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .group         0x00000000        0x8 release\s3eVungle_platform.os
- .group         0x00000000        0x8 release\s3eVungle_platform.os
- .group         0x00000000        0x8 release\s3eVungle_platform.os
- .group         0x00000000        0x8 release\s3eVungle_platform.os
- .text          0x00000000        0x0 release\s3eVungle_platform.os
+                0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
+ _ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
+ _ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
+ _ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
+ _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
+ .text          0x0000000000000000        0x0 release\s3eVungle_platform.os
  .text._Z10getCStringP8_jstring
-                0x00000000       0x6c release\s3eVungle_platform.os
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
  .note.GNU-stack
-                0x00000000        0x0 release\s3eVungle_platform.os
- .text          0x00000000        0x0 release\s3eVungle.os
- .data          0x00000000        0x0 release\s3eVungle.os
- .bss           0x00000000        0x0 release\s3eVungle.os
+                0x0000000000000000        0x0 release\s3eVungle_platform.os
+ .text          0x0000000000000000        0x0 release\s3eVungle.os
+ .data          0x0000000000000000        0x0 release\s3eVungle.os
+ .bss           0x0000000000000000        0x0 release\s3eVungle.os
  .note.GNU-stack
-                0x00000000        0x0 release\s3eVungle.os
- .text          0x00000000        0x0 release\s3eVungle_register.os
- .data          0x00000000        0x0 release\s3eVungle_register.os
- .bss           0x00000000        0x0 release\s3eVungle_register.os
+                0x0000000000000000        0x0 release\s3eVungle.os
+ .text          0x0000000000000000        0x0 release\s3eVungle_register.os
+ .data          0x0000000000000000        0x0 release\s3eVungle_register.os
+ .bss           0x0000000000000000        0x0 release\s3eVungle_register.os
  .text._Z20s3eVungleRegisterExtv
-                0x00000000      0x1c0 release\s3eVungle_register.os
+                0x0000000000000000        0x0 release\s3eVungle_register.os
  .note.GNU-stack
-                0x00000000        0x0 release\s3eVungle_register.os
- .text          0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x0000000000000000        0x0 release\s3eVungle_register.os
+ .text          0x0000000000000000        0x0 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x0000000000000000        0x0 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x0000000000000000        0x0 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000       0x30 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x0000000000000000        0x0 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000       0x30 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x0000000000000000        0x0 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
- .text          0x00000000        0x0 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
- .data          0x00000000        0x0 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
- .bss           0x00000000        0x0 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+                0x0000000000000000        0x0 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+ .data          0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+ .bss           0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .note.GNU-stack
-                0x00000000        0x0 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+                0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 
-Memory map
+Memory Configuration
 
- ** file header
-                0x00000000       0x34
- ** segment headers
-                0x00000034       0xe0
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
 
-.interp         0x00000114       0x13
- ** fill        0x00000114       0x13
+Linker script and memory map
 
-.dynsym         0x00000128      0x1a0
- ** dynsym      0x00000128      0x1a0
+LOAD d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+LOAD release\s3eVungle_platform.os
+LOAD release\s3eVungle.os
+LOAD release\s3eVungle_register.os
+LOAD C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a
+LOAD C:\airplay\7.1.2\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD D:\Android-ndk\platforms\android-9\arch-arm\usr\lib/liblog.so
+LOAD D:\Android-ndk\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a
+LOAD d:/Android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
+LOAD D:\Android-ndk\platforms\android-9\arch-arm\usr\lib/libstdc++.so
+LOAD D:\Android-ndk\platforms\android-9\arch-arm\usr\lib/libm.so
+LOAD D:\Android-ndk\platforms\android-9\arch-arm\usr\lib/libc.so
+LOAD d:/Android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
+LOAD D:\Android-ndk\platforms\android-9\arch-arm\usr\lib/libc.so
+LOAD D:\Android-ndk\platforms\android-9\arch-arm\usr\lib/libdl.so
+LOAD d:/Android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows-x86_64/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
+LOAD d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+                0x00000000000000d4                . = (0x0 + SIZEOF_HEADERS)
 
-.dynstr         0x000002c8      0x1ec
- ** string table
-                0x000002c8      0x1ec
+.note.gnu.build-id
+ *(.note.gnu.build-id)
 
-.hash           0x000004b4       0xb4
- ** hash        0x000004b4       0xb4
+.hash           0x00000000000000d4       0xd8
+ *(.hash)
+ .hash          0x00000000000000d4       0xd8 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.rel.dyn        0x00000568      0x108
- ** dynamic relocs
-                0x00000568      0x108
+.gnu.hash
+ *(.gnu.hash)
 
-.rel.plt        0x00000670       0x90
- ** dynamic relocs
-                0x00000670       0x90
+.dynsym         0x00000000000001ac      0x230
+ *(.dynsym)
+ .dynsym        0x00000000000001ac      0x230 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.plt            0x00000700       0xec
- ** PLT         0x00000700       0xec
+.dynstr         0x00000000000003dc      0x230
+ *(.dynstr)
+ .dynstr        0x00000000000003dc      0x230 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 
-.text           0x000007ec      0xec0
- .text.exit     0x000007ec       0x10 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x000007ec                __on_dlclose
- .text._ZL22s3eVungle_ViewCallbackP7_JNIEnvP8_jobjectdd
-                0x000007fc       0x88 release\s3eVungle_platform.os
- .text._ZL21s3eVungle_EndCallbackP7_JNIEnvP8_jobject
-                0x00000884       0x50 release\s3eVungle_platform.os
- .text._ZL23s3eVungle_StartCallbackP7_JNIEnvP8_jobject
-                0x000008d4       0x50 release\s3eVungle_platform.os
- .text._ZL27s3eEdkAndroidFindClass_realPKc
-                0x00000924       0xb4 release\s3eVungle_platform.os
- .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x000009d8       0x38 release\s3eVungle_platform.os
-                0x000009d8                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
- .text._ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
-                0x00000a10       0x38 release\s3eVungle_platform.os
-                0x00000a10                _JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
- .text._ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
-                0x00000a48       0x38 release\s3eVungle_platform.os
-                0x00000a48                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
- .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
-                0x00000a80       0x38 release\s3eVungle_platform.os
-                0x00000a80                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
- .text._Z18applicationResumedPvS_
-                0x00000ab8       0x50 release\s3eVungle_platform.os
-                0x00000ab8                applicationResumed(void*, void*)
- .text._Z17applicationPausedPvS_
-                0x00000b08       0x54 release\s3eVungle_platform.os
-                0x00000b08                applicationPaused(void*, void*)
- .text._Z22s3eVungleInit_platformv
-                0x00000b5c      0x3c0 release\s3eVungle_platform.os
-                0x00000b5c                s3eVungleInit_platform()
- .text._Z27s3eVungleTerminate_platformv
-                0x00000f1c       0x4c release\s3eVungle_platform.os
-                0x00000f1c                s3eVungleTerminate_platform()
+.gnu.version    0x000000000000060c        0x0
+ *(.gnu.version)
+ .gnu.version   0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+
+.gnu.version_d  0x000000000000060c        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+
+.gnu.version_r  0x000000000000060c        0x0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+
+.rel.dyn        0x000000000000060c      0x110
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ .rel.data.rel.ro.local
+                0x000000000000060c       0x48 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x0000000000000654       0xc0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.fini_array
+                0x0000000000000714        0x8 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x000000000000071c       0x90
+ *(.rel.plt)
+ .rel.plt       0x000000000000071c       0x90 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt            0x00000000000007ac       0xec
+ *(.plt)
+ .plt           0x00000000000007ac       0xec d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+
+.text           0x0000000000000898      0xf6c
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text.exit     0x0000000000000898       0x10 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000000898                __on_dlclose
+ .text._ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+                0x00000000000008a8       0x14 release\s3eVungle_platform.os
+                0x00000000000008a8                _JNIEnv::GetMethodID(_jclass*, char const*, char const*)
  .text._Z33s3eVungleDefaultUserData_platformP17s3eVungleUserData
-                0x00000f68       0x18 release\s3eVungle_platform.os
-                0x00000f68                s3eVungleDefaultUserData_platform(s3eVungleUserData*)
- .text._Z23s3eVungleStart_platformPKc
-                0x00000f80       0x88 release\s3eVungle_platform.os
-                0x00000f80                s3eVungleStart_platform(char const*)
- .text._Z35s3eVungleStartWithUserData_platformPKcPK17s3eVungleUserData
-                0x00001008       0x88 release\s3eVungle_platform.os
-                0x00001008                s3eVungleStartWithUserData_platform(char const*, s3eVungleUserData const*)
- .text._Z38s3eVungleGetCurrentStatusData_platformP19s3eVungleStatusData
-                0x00001090       0x40 release\s3eVungle_platform.os
-                0x00001090                s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData*)
+                0x00000000000008bc       0x18 release\s3eVungle_platform.os
+                0x00000000000008bc                s3eVungleDefaultUserData_platform(s3eVungleUserData*)
  .text._Z27s3eVungleIsRunning_platformv
-                0x000010d0        0x8 release\s3eVungle_platform.os
-                0x000010d0                s3eVungleIsRunning_platform()
+                0x00000000000008d4        0x8 release\s3eVungle_platform.os
+                0x00000000000008d4                s3eVungleIsRunning_platform()
  .text._Z33s3eVunglePrintCacheFiles_platformv
-                0x000010d8        0x4 release\s3eVungle_platform.os
-                0x000010d8                s3eVunglePrintCacheFiles_platform()
+                0x00000000000008dc        0x4 release\s3eVungle_platform.os
+                0x00000000000008dc                s3eVunglePrintCacheFiles_platform()
  .text._Z37s3eVunglePrintDeviceSettings_platformv
-                0x000010dc        0x4 release\s3eVungle_platform.os
-                0x000010dc                s3eVunglePrintDeviceSettings_platform()
- .text._Z34s3eVungleGetVersionString_platformv
-                0x000010e0       0xa8 release\s3eVungle_platform.os
-                0x000010e0                s3eVungleGetVersionString_platform()
- .text._Z31s3eVungleIsAdAvailable_platformv
-                0x00001188       0x50 release\s3eVungle_platform.os
-                0x00001188                s3eVungleIsAdAvailable_platform()
- .text._Z29s3eVunglePlayModalAd_platformhh
-                0x000011d8       0x60 release\s3eVungle_platform.os
-                0x000011d8                s3eVunglePlayModalAd_platform(unsigned char, unsigned char)
- .text._Z36s3eVunglePlayIncentivizedAd_platformhhPKc
-                0x00001238       0x98 release\s3eVungle_platform.os
-                0x00001238                s3eVunglePlayIncentivizedAd_platform(unsigned char, unsigned char, char const*)
+                0x00000000000008e0        0x4 release\s3eVungle_platform.os
+                0x00000000000008e0                s3eVunglePrintDeviceSettings_platform()
  .text._Z30s3eVungleGetCacheSize_platformv
-                0x000012d0        0x8 release\s3eVungle_platform.os
-                0x000012d0                s3eVungleGetCacheSize_platform()
+                0x00000000000008e4        0x8 release\s3eVungle_platform.os
+                0x00000000000008e4                s3eVungleGetCacheSize_platform()
  .text._Z30s3eVungleSetCacheSize_platformi
-                0x000012d8        0x4 release\s3eVungle_platform.os
-                0x000012d8                s3eVungleSetCacheSize_platform(int)
+                0x00000000000008ec        0x4 release\s3eVungle_platform.os
+                0x00000000000008ec                s3eVungleSetCacheSize_platform(int)
  .text._Z32s3eVungleSetLogToStdout_platformh
-                0x000012dc        0x4 release\s3eVungle_platform.os
-                0x000012dc                s3eVungleSetLogToStdout_platform(unsigned char)
- .text._Z33s3eVungleSetSoundEnabled_platformh
-                0x000012e0       0x58 release\s3eVungle_platform.os
-                0x000012e0                s3eVungleSetSoundEnabled_platform(unsigned char)
+                0x00000000000008f0        0x4 release\s3eVungle_platform.os
+                0x00000000000008f0                s3eVungleSetLogToStdout_platform(unsigned char)
  .text._Z41s3eVungleSetMuteIfMusicIsPlaying_platformh
-                0x00001338        0x4 release\s3eVungle_platform.os
-                0x00001338                s3eVungleSetMuteIfMusicIsPlaying_platform(unsigned char)
+                0x00000000000008f4        0x4 release\s3eVungle_platform.os
+                0x00000000000008f4                s3eVungleSetMuteIfMusicIsPlaying_platform(unsigned char)
  .text._Z40s3eVungleSetCustomCountDownText_platformPKc
-                0x0000133c        0x8 release\s3eVungle_platform.os
-                0x0000133c                s3eVungleSetCustomCountDownText_platform(char const*)
+                0x00000000000008f8        0x8 release\s3eVungle_platform.os
+                0x00000000000008f8                s3eVungleSetCustomCountDownText_platform(char const*)
  .text._Z37s3eVungleSetAlertBoxSettings_platformPKcS0_S0_S0_
-                0x00001344        0x4 release\s3eVungle_platform.os
-                0x00001344                s3eVungleSetAlertBoxSettings_platform(char const*, char const*, char const*, char const*)
+                0x0000000000000900        0x4 release\s3eVungle_platform.os
+                0x0000000000000900                s3eVungleSetAlertBoxSettings_platform(char const*, char const*, char const*, char const*)
+ .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x0000000000000904       0x34 release\s3eVungle_platform.os
+                0x0000000000000904                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
+                0x0000000000000938       0x34 release\s3eVungle_platform.os
+                0x0000000000000938                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv16CallObjectMethodEP8_jobjectP10_jmethodIDz
+                0x000000000000096c       0x34 release\s3eVungle_platform.os
+                0x000000000000096c                _JNIEnv::CallObjectMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00000000000009a0       0x34 release\s3eVungle_platform.os
+                0x00000000000009a0                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+ .text._Z38s3eVungleGetCurrentStatusData_platformP19s3eVungleStatusData
+                0x00000000000009d4       0x1c release\s3eVungle_platform.os
+                0x00000000000009d4                s3eVungleGetCurrentStatusData_platform(s3eVungleStatusData*)
+ .text._Z27s3eVungleTerminate_platformv
+                0x00000000000009f0       0x4c release\s3eVungle_platform.os
+                0x00000000000009f0                s3eVungleTerminate_platform()
+ *fill*         0x0000000000000a3c        0x4 00000000
+ .text._ZL22s3eVungle_ViewCallbackP7_JNIEnvP8_jobjectdd
+                0x0000000000000a40       0x98 release\s3eVungle_platform.os
+ .text._ZL21s3eVungle_EndCallbackP7_JNIEnvP8_jobject
+                0x0000000000000ad8       0x54 release\s3eVungle_platform.os
+ .text._ZL23s3eVungle_StartCallbackP7_JNIEnvP8_jobject
+                0x0000000000000b2c       0x54 release\s3eVungle_platform.os
+ .text._Z22s3eVungleInit_platformv
+                0x0000000000000b80      0x3d8 release\s3eVungle_platform.os
+                0x0000000000000b80                s3eVungleInit_platform()
+ .text._Z38s3eVungleSetBackButtonEnabled_platformh
+                0x0000000000000f58       0x58 release\s3eVungle_platform.os
+                0x0000000000000f58                s3eVungleSetBackButtonEnabled_platform(unsigned char)
+ .text._Z29s3eVunglePlayModalAd_platformhh
+                0x0000000000000fb0       0x60 release\s3eVungle_platform.os
+                0x0000000000000fb0                s3eVunglePlayModalAd_platform(unsigned char, unsigned char)
+ .text._Z18applicationResumedPvS_
+                0x0000000000001010       0x54 release\s3eVungle_platform.os
+                0x0000000000001010                applicationResumed(void*, void*)
+ .text._Z33s3eVungleSetSoundEnabled_platformh
+                0x0000000000001064       0x58 release\s3eVungle_platform.os
+                0x0000000000001064                s3eVungleSetSoundEnabled_platform(unsigned char)
  .text._Z36s3eVungleSetAllowAutoRotate_platformh
-                0x00001348       0x58 release\s3eVungle_platform.os
-                0x00001348                s3eVungleSetAllowAutoRotate_platform(unsigned char)
- .text._Z13s3eVungleInitv
-                0x000013a0        0x4 release\s3eVungle.os
-                0x000013a0                s3eVungleInit()
- .text._Z18s3eVungleTerminatev
-                0x000013a4        0x4 release\s3eVungle.os
-                0x000013a4                s3eVungleTerminate()
- .text.s3eVungleDefaultUserData
-                0x000013a8        0x4 release\s3eVungle.os
-                0x000013a8                s3eVungleDefaultUserData
- .text.s3eVungleRegister
-                0x000013ac       0x30 release\s3eVungle.os
-                0x000013ac                s3eVungleRegister
- .text.s3eVungleUnRegister
-                0x000013dc       0x30 release\s3eVungle.os
-                0x000013dc                s3eVungleUnRegister
- .text.s3eVungleStart
-                0x0000140c        0x4 release\s3eVungle.os
-                0x0000140c                s3eVungleStart
- .text.s3eVungleStartWithUserData
-                0x00001410        0x4 release\s3eVungle.os
-                0x00001410                s3eVungleStartWithUserData
- .text.s3eVungleGetCurrentStatusData
-                0x00001414        0x4 release\s3eVungle.os
-                0x00001414                s3eVungleGetCurrentStatusData
- .text.s3eVungleIsRunning
-                0x00001418        0x4 release\s3eVungle.os
-                0x00001418                s3eVungleIsRunning
- .text.s3eVunglePrintCacheFiles
-                0x0000141c        0x4 release\s3eVungle.os
-                0x0000141c                s3eVunglePrintCacheFiles
- .text.s3eVunglePrintDeviceSettings
-                0x00001420        0x4 release\s3eVungle.os
-                0x00001420                s3eVunglePrintDeviceSettings
- .text.s3eVungleGetVersionString
-                0x00001424        0x4 release\s3eVungle.os
-                0x00001424                s3eVungleGetVersionString
- .text.s3eVungleIsAdAvailable
-                0x00001428        0x4 release\s3eVungle.os
-                0x00001428                s3eVungleIsAdAvailable
- .text.s3eVunglePlayModalAd
-                0x0000142c        0x4 release\s3eVungle.os
-                0x0000142c                s3eVunglePlayModalAd
- .text.s3eVunglePlayIncentivizedAd
-                0x00001430        0x4 release\s3eVungle.os
-                0x00001430                s3eVunglePlayIncentivizedAd
- .text.s3eVungleGetCacheSize
-                0x00001434        0x4 release\s3eVungle.os
-                0x00001434                s3eVungleGetCacheSize
- .text.s3eVungleSetCacheSize
-                0x00001438        0x4 release\s3eVungle.os
-                0x00001438                s3eVungleSetCacheSize
- .text.s3eVungleSetLogToStdout
-                0x0000143c        0x4 release\s3eVungle.os
-                0x0000143c                s3eVungleSetLogToStdout
- .text.s3eVungleSetSoundEnabled
-                0x00001440        0x4 release\s3eVungle.os
-                0x00001440                s3eVungleSetSoundEnabled
- .text.s3eVungleSetMuteIfMusicIsPlaying
-                0x00001444        0x4 release\s3eVungle.os
-                0x00001444                s3eVungleSetMuteIfMusicIsPlaying
- .text.s3eVungleSetCustomCountDownText
-                0x00001448        0x4 release\s3eVungle.os
-                0x00001448                s3eVungleSetCustomCountDownText
- .text.s3eVungleSetAlertBoxSettings
-                0x0000144c        0x4 release\s3eVungle.os
-                0x0000144c                s3eVungleSetAlertBoxSettings
+                0x00000000000010bc       0x58 release\s3eVungle_platform.os
+                0x00000000000010bc                s3eVungleSetAllowAutoRotate_platform(unsigned char)
+ .text._Z17applicationPausedPvS_
+                0x0000000000001114       0x54 release\s3eVungle_platform.os
+                0x0000000000001114                applicationPaused(void*, void*)
+ .text._Z31s3eVungleIsAdAvailable_platformv
+                0x0000000000001168       0x50 release\s3eVungle_platform.os
+                0x0000000000001168                s3eVungleIsAdAvailable_platform()
+ .text._Z36s3eVunglePlayIncentivizedAd_platformhhPKc
+                0x00000000000011b8       0x98 release\s3eVungle_platform.os
+                0x00000000000011b8                s3eVunglePlayIncentivizedAd_platform(unsigned char, unsigned char, char const*)
+ .text._Z35s3eVungleStartWithUserData_platformPKcPK17s3eVungleUserData
+                0x0000000000001250       0x88 release\s3eVungle_platform.os
+                0x0000000000001250                s3eVungleStartWithUserData_platform(char const*, s3eVungleUserData const*)
+ .text._Z23s3eVungleStart_platformPKc
+                0x00000000000012d8       0x88 release\s3eVungle_platform.os
+                0x00000000000012d8                s3eVungleStart_platform(char const*)
+ .text._ZL27s3eEdkAndroidFindClass_realPKc
+                0x0000000000001360       0xb8 release\s3eVungle_platform.os
+ .text._Z34s3eVungleGetVersionString_platformv
+                0x0000000000001418       0xa0 release\s3eVungle_platform.os
+                0x0000000000001418                s3eVungleGetVersionString_platform()
+ .text.s3eVungleSetBackButtonEnabled
+                0x00000000000014b8        0x4 release\s3eVungle.os
+                0x00000000000014b8                s3eVungleSetBackButtonEnabled
  .text.s3eVungleSetAllowAutoRotate
-                0x00001450        0x4 release\s3eVungle.os
-                0x00001450                s3eVungleSetAllowAutoRotate
+                0x00000000000014bc        0x4 release\s3eVungle.os
+                0x00000000000014bc                s3eVungleSetAllowAutoRotate
+ .text.s3eVungleSetAlertBoxSettings
+                0x00000000000014c0        0x4 release\s3eVungle.os
+                0x00000000000014c0                s3eVungleSetAlertBoxSettings
+ .text.s3eVungleSetCustomCountDownText
+                0x00000000000014c4        0x4 release\s3eVungle.os
+                0x00000000000014c4                s3eVungleSetCustomCountDownText
+ .text.s3eVungleSetMuteIfMusicIsPlaying
+                0x00000000000014c8        0x4 release\s3eVungle.os
+                0x00000000000014c8                s3eVungleSetMuteIfMusicIsPlaying
+ .text.s3eVungleSetSoundEnabled
+                0x00000000000014cc        0x4 release\s3eVungle.os
+                0x00000000000014cc                s3eVungleSetSoundEnabled
+ .text.s3eVungleSetLogToStdout
+                0x00000000000014d0        0x4 release\s3eVungle.os
+                0x00000000000014d0                s3eVungleSetLogToStdout
+ .text.s3eVungleSetCacheSize
+                0x00000000000014d4        0x4 release\s3eVungle.os
+                0x00000000000014d4                s3eVungleSetCacheSize
+ .text.s3eVungleGetCacheSize
+                0x00000000000014d8        0x4 release\s3eVungle.os
+                0x00000000000014d8                s3eVungleGetCacheSize
+ .text.s3eVunglePlayIncentivizedAd
+                0x00000000000014dc        0x4 release\s3eVungle.os
+                0x00000000000014dc                s3eVunglePlayIncentivizedAd
+ .text.s3eVunglePlayModalAd
+                0x00000000000014e0        0x4 release\s3eVungle.os
+                0x00000000000014e0                s3eVunglePlayModalAd
+ .text.s3eVungleIsAdAvailable
+                0x00000000000014e4        0x4 release\s3eVungle.os
+                0x00000000000014e4                s3eVungleIsAdAvailable
+ .text.s3eVungleGetVersionString
+                0x00000000000014e8        0x4 release\s3eVungle.os
+                0x00000000000014e8                s3eVungleGetVersionString
+ .text.s3eVunglePrintDeviceSettings
+                0x00000000000014ec        0x4 release\s3eVungle.os
+                0x00000000000014ec                s3eVunglePrintDeviceSettings
+ .text.s3eVunglePrintCacheFiles
+                0x00000000000014f0        0x4 release\s3eVungle.os
+                0x00000000000014f0                s3eVunglePrintCacheFiles
+ .text.s3eVungleIsRunning
+                0x00000000000014f4        0x4 release\s3eVungle.os
+                0x00000000000014f4                s3eVungleIsRunning
+ .text.s3eVungleGetCurrentStatusData
+                0x00000000000014f8        0x4 release\s3eVungle.os
+                0x00000000000014f8                s3eVungleGetCurrentStatusData
+ .text.s3eVungleStartWithUserData
+                0x00000000000014fc        0x4 release\s3eVungle.os
+                0x00000000000014fc                s3eVungleStartWithUserData
+ .text.s3eVungleStart
+                0x0000000000001500        0x4 release\s3eVungle.os
+                0x0000000000001500                s3eVungleStart
+ .text.s3eVungleUnRegister
+                0x0000000000001504       0x30 release\s3eVungle.os
+                0x0000000000001504                s3eVungleUnRegister
+ .text.s3eVungleRegister
+                0x0000000000001534       0x34 release\s3eVungle.os
+                0x0000000000001534                s3eVungleRegister
+ .text.s3eVungleDefaultUserData
+                0x0000000000001568        0x4 release\s3eVungle.os
+                0x0000000000001568                s3eVungleDefaultUserData
+ .text._Z18s3eVungleTerminatev
+                0x000000000000156c        0x4 release\s3eVungle.os
+                0x000000000000156c                s3eVungleTerminate()
+ .text._Z13s3eVungleInitv
+                0x0000000000001570        0x4 release\s3eVungle.os
+                0x0000000000001570                s3eVungleInit()
  .text._ZL32s3eVunglePlayIncentivizedAd_wraphhPKc
-                0x00001454       0x40 release\s3eVungle_register.os
+                0x0000000000001574       0x34 release\s3eVungle_register.os
  .text._ZL25s3eVunglePlayModalAd_wraphh
-                0x00001494       0x28 release\s3eVungle_register.os
+                0x00000000000015a8       0x1c release\s3eVungle_register.os
  .text.RegisterExt
-                0x000014bc      0x1c0 release\s3eVungle_register.os
-                0x000014bc                RegisterExt
+                0x00000000000015c4      0x210 release\s3eVungle_register.os
+                0x00000000000015c4                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0xffffffffffffffff       0x30 C:\Marmalade\6.4\s3e\edk\lib\android/libedk.a(edk_helpers.o)
-                0x0000167c                s3eEdkThreadRunOnOS
+                0x00000000000017d4       0x30 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000000017d4                s3eEdkThreadRunOnOS
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x0000000000000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.rodata         0x000016ac      0x178
+.fini
+ *(.fini)
+                0x0000000000001804                PROVIDE (__etext, .)
+                0x0000000000001804                PROVIDE (_etext, .)
+                0x0000000000001804                PROVIDE (etext, .)
+
+.rodata         0x0000000000001804      0x18c
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x000016ac      0x16c release\s3eVungle_platform.os
+                0x0000000000001804      0x18c release\s3eVungle_platform.os
  .rodata.str1.4
-                0x00001818        0xc release\s3eVungle_register.os
+                0x0000000000000000        0xc release\s3eVungle_register.os
 
-.fini_array     0x00002e64        0x8
- .fini_array    0x00002e64        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .fini_array    0x00002e68        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+.rodata1
+ *(.rodata1)
 
-.init_array     0x00002e6c        0x4
- .init_array    0x00002e6c        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000000001990                __exidx_start = .
 
-.dynamic        0x00002e70       0xe0
- ** dynamic     0x00002e70       0xe0
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000000000001990                __exidx_end = .
 
-.got            0x00002f50       0xb0
- ** GOT         0x00002f50       0x5c
- ** GOT PLT     0x00002fac       0x54
+.eh_frame_hdr
+ *(.eh_frame_hdr)
 
-.data           0x00003000       0x2c
- .data          0x00003000        0x4 C:/Program Files/adt-bundle-windows-x86_64-20130717/android-ndk-r8e/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00003000                __dso_handle
- .data          0x00003004       0x28 release\s3eVungle_platform.os
+.eh_frame
+ *(.eh_frame)
 
-.bss            0x0000302c       0x2c
- .bss           0x0000302c       0x2c release\s3eVungle_platform.os
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0000000000001990                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x0000000000002e44                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array     0x0000000000002e44        0x4
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x0000000000002e44        0x4 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+
+.fini_array     0x0000000000002e48        0x8
+ *(.fini_array)
+ .fini_array    0x0000000000002e48        0x4 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ .fini_array    0x0000000000002e4c        0x4 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+ *(SORT(.fini_array.*))
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x0000000000002e50       0x24
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ .data.rel.ro.local
+                0x0000000000002e50       0x24 release\s3eVungle_platform.os
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x0000000000002e74       0xd8
+ *(.dynamic)
+ .dynamic       0x0000000000002e74       0xd8 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000002e74                _DYNAMIC
+
+.got            0x0000000000002f4c       0xb4
+ *(.got.plt)
+ .got.plt       0x0000000000002f4c       0x54 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000002f4c                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x0000000000002fa0       0x60 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000003000                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.data           0x0000000000003000        0x8
+                0x0000000000003000                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000003000        0x4 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                0x0000000000003000                __dso_handle
+ .data          0x0000000000003004        0x4 release\s3eVungle_platform.os
+
+.data1
+ *(.data1)
+                0x0000000000003008                _edata = .
+                0x0000000000003008                PROVIDE (edata, .)
+                0x0000000000003008                __bss_start = .
+                0x0000000000003008                __bss_start__ = .
+
+.bss            0x0000000000003008       0x30
+ *(.dynbss)
+ .dynbss        0x0000000000000000        0x0 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000003008       0x30 release\s3eVungle_platform.os
+ *(COMMON)
+                0x0000000000003038                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000000003038                _bss_end__ = .
+                0x0000000000003038                __bss_end__ = .
+                0x0000000000003038                . = ALIGN (0x4)
+                0x0000000000003038                . = ALIGN (0x4)
+                0x0000000000003038                __end__ = .
+                0x0000000000003038                _end = .
+                0x0000000000003038                PROVIDE (end, .)
+                0x0000000000003038                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x6d
+ *(.comment)
+ .comment       0x0000000000000000       0x25 d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+                                         0x26 (size before relaxing)
+ .comment       0x0000000000000025       0x12 release\s3eVungle_platform.os
+ .comment       0x0000000000000037       0x12 release\s3eVungle.os
+ .comment       0x0000000000000049       0x12 release\s3eVungle_register.os
+ .comment       0x000000000000005b       0x12 C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(D:\HOG\HOG-Orinoco\s3eVungle\lib\android\libs3eVungle.so elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ .ARM.attributes
+                0x0000000000000000       0x2d d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ .ARM.attributes
+                0x000000000000002d       0x2d release\s3eVungle_platform.os
+ .ARM.attributes
+                0x000000000000005a       0x2b release\s3eVungle.os
+ .ARM.attributes
+                0x0000000000000085       0x2b release\s3eVungle_register.os
+ .ARM.attributes
+                0x00000000000000b0       0x2b C:\airplay\7.1.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .ARM.attributes
+                0x00000000000000db       0x1f d:/Android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o

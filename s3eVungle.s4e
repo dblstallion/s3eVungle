@@ -149,3 +149,5 @@ s3eBool s3eVungleSetCustomCountDownText(const char* text) S3E_FALSE
 void s3eVungleSetAlertBoxSettings(const char* title, const char* body, const char* leftButtonTitle, const char* rightButtonTitle)
 
 void s3eVungleSetAllowAutoRotate(s3eBool allow)
+
+void s3eVungleSetBackButtonEnabled(s3eBool isBackButtonEnabled)

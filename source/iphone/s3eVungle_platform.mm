@@ -235,3 +235,7 @@ void s3eVungleSetAllowAutoRotate_platform(s3eBool allow)
 {
     [VGVunglePub allowAutoRotate:allow];
 }
+
+void s3eVungleSetBackButtonEnabled_platform(s3eBool isBackButtonEnabled)
+{
+}

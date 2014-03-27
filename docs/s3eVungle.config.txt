@@ -1,0 +1,3 @@
+[Vungle]
+AppID	<String>	pubAppID
+Enable	<Integer>	0 or 1
